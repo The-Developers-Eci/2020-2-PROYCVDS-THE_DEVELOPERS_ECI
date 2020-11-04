@@ -20,14 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ffeb5e7-76ae-4737-bb2e-e37db0a3bb9c" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/webapp/assets/img/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/main/webapp/assets/img/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/webapp/assets/img/header-bg.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/main/webapp/assets/img/header-bg.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/webapp/assets/img/team/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/main/webapp/assets/img/team/1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/webapp/assets/img/team/2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/main/webapp/assets/img/team/2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/webapp/assets/img/team/3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/main/webapp/assets/img/team/3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/main/webapp/index.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +90,7 @@
       <updated>1604026375129</updated>
       <workItem from="1604026376222" duration="20000" />
       <workItem from="1604064536602" duration="277000" />
-      <workItem from="1604467599133" duration="3921000" />
+      <workItem from="1604467599133" duration="4522000" />
     </task>
     <servers />
   </component>
