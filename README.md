@@ -1,7 +1,9 @@
 # 2020-2-PROYCVDS-THE_DEVELOPERS_ECI
 
-
-
+### Integrantes:
+- Paula Guevara
+- Fabian Ramirez
+- Federico Barrios
 
 
 3 Creacion de base datos
