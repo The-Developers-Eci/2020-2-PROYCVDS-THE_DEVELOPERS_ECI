@@ -7,14 +7,16 @@ CREATE TABLE IF NOT EXISTS usuarios(
 );
 
 
-CREATE TABLE IF NOT EXISTS Elementos(
+REATE TABLE IF NOT EXISTS Elementos(
 	id serial primary key,
 	tipo varchar(50) not null,
 	marca varchar(50) not null,
 	referencia varchar(50) not null,
 	equipo int null,
 	FechaDeRegistro date not null,
-	activo boolean not null	
+	activo boolean not null
+	constraint fk_Elemento_clasificacionElemento foreign key(tipo) references ClasificacionElemento(nombre),
+	constraint fk_Elemento_equipo foreign key(equipo) references equipo(id)
 );
 
 CREATE TABLE IF NOT EXISTS Laboratorios(
@@ -39,7 +41,10 @@ CREATE TABLE IF NOT EXISTS Actualizacion(
 	titulo varchar(50) not null,
 	actualizacion varchar (400) not null,
 	equipo int null,
-	fecha date not null
+	fecha date not null,
+	constraint fk_Actualizacion_equipo foreign key(equipo) references equipo(id),
+	constraint fk_Actualizacion_elementos foreign key(elementos) references elementos(id),
+	constraint fk_Actualizacion_Usuarios foreign key(encargado) references usuarios(correo)
 );
 
 
