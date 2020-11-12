@@ -1,25 +1,46 @@
 package edu.eci.cvds.bean;
 
-import edu.eci.cvds.entities.Usuario;
-import edu.eci.cvds.service.ServicesUsuario;
-
+import javax.faces.application.FacesMessage;
+import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+
+import org.primefaces.PrimeFaces;
+
+import edu.eci.cvds.sample.services.ExcepcionServiceHistorialEquipos;
+import edu.eci.cvds.sample.services.ServiceHistorialEquipos;
+import edu.eci.cvds.sample.entities.User;
+import edu.eci.cvds.sample.factory.ServiceFactory;
 
 import java.util.List;
 
-import com.google.inject.Inject;
+@ManagedBean(name = "Usuario")
+@ApplicationScoped
 
-@SuppressWarnings("deprecation")
-@ManagedBean(name = "usuarioBean")
-@SessionScoped
+public class UsuarioBean {
 
-public class UsuarioBean extends BasePageBean{
+    private final ServiceHistorialEquipos serviceHE;
+    public List<User> usuarios;
 
-    @Inject
-    private  ServicesUsuario servicesUsuario;
+    public List<User> getUsuarios() {
+        return usuarios;
+    }
 
-    public List<Usuario> getUsuarios(){
-        return servicesUsuario.consultarUsuarios();
+    public void setUsuarios(List<User> usuarios) {
+        this.usuarios = usuarios;
+    }
+
+    public UsuarioBean(){
+        serviceHE = ServiceFactory.getInstance().getServiceHistorialEquipos();
+        try{
+            usuarios = serviceHE.consultarUsuarios();
+        }catch(ExcepcionServiceHistorialEquipos e){
+        }
+    }
+
+    public void start(){ }
+
+    public void showMessage(String confirmacion) {
+        FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Mensaje", confirmacion);
+        PrimeFaces.current().dialog().showMessageDynamic(message);
     }
 }
