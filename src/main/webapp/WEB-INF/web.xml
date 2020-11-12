@@ -31,7 +31,7 @@ and open the template in the editor.
 
 
     <welcome-file-list>
-        <welcome-file>faces/Index.xhtml</welcome-file>
+        <welcome-file>faces/index.xhtml</welcome-file>
 
     </welcome-file-list>
 
