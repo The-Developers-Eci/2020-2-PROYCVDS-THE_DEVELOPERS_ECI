@@ -29,43 +29,38 @@
                     <br/>
                     <br/>
                     <br/>
-                    <div class="brand" style =" height: 250px ; width: 250px ; margin: auto">
-                        <img  src="assets/img/logolab.jpg" alt="logo"/>
-                    </div>
-                    <br/>
+                    <center>
+                        <div class="brand" style =" height: 250px ; width: 250px ; margin: auto">
+                            <img  src="assets/img/logolab.jpg" alt="logo"/>
+                        </div>
+                    </center>
 
                     <div class="card fat">
                         <div class="card-body">
                             <h1 class="card-title" style="text-align: center">Inicia sesión</h1>
+                            <h:form id="formUsuario" >
+                                <p:messages id="messages" showDetail="false" closable="true">
+                                    <p:autoUpdate />
+                                </p:messages>
+                                <center>
 
-                            <h:form class="my-login-validation" id="formulario" >
-                                <p:messages id="messages" closable="true"/>
+                                    <label for="email"> Correo </label>
+                                    <br>
+                                        <p:inputText type="text" id="correo_usuario" required="true" value="#{loginBean.userName}" binding="#{correo}"></p:inputText>
+                                    </br>
 
-                                <div class="form-group">
-                                    <label for="email">Correo</label>
-                                    <input style=" height: 30px ; font-size: 18px" id="email" type="email" class="form-control" name="email" value="" required="true" autofocus="true"/>
-                                    <div class="invalid-feedback">
-                                        Introduzca Email valido.
-                                    </div>
-                                </div>
+                                    <label for="password"> Contraseña </label>
+                                    <br>
+                                        <p:inputText type="password" id="clave_usuario" required="true" value="#{loginBean.userPassword}" binding="#{contrasena}"></p:inputText>
+                                    </br>
 
-                                <div class="form-group">
-                                    <label for="password">Contraseña
-                                    </label>
-                                    <input style=" height: 30px ; font-size: 18px " id="password" type="password" class="form-control" name="password" required="true" data-eye="true" autofocus="true"/>
-                                    <div class="invalid-feedback">
-                                        Introduzca contraseña
-                                    </div>
-                                </div>
+                                </center>
 
-                                <div class="form-group m-0">
-                                    <p:commandButton  type="submit" class="btn btn-primary btn-block" value="Iniciar Sesion">
+                                <br/>
 
-                                        <f:ajax execute="@form" render="email password"/>
-
-                                    </p:commandButton>
-                                </div>
-
+                                <center>
+                                    <p:commandButton type="submit" class="btn btn-primary btn-block" update="formUsuario" value="Ingresar" action="#{loginBean.loginUser()}"/>
+                                </center>
                             </h:form>
                         </div>
                     </div>

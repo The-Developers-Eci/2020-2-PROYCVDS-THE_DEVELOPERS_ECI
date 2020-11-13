@@ -8,6 +8,7 @@
 
         <id property='correo' column='correo'/>
         <result property='nombreUsuario' column='nombreusuario'/>
+        <result property='clave' column='clave'/>
         <result property='nombre' column='nombre'/>
         <result property='apellido' column='apellido'/>
         <result property='estado' column='estado'/>       
@@ -19,10 +20,11 @@
         select
             u.correo,
             u.nombreusuario,
+            u.clave,
             u.nombre,
             u.apellido,
             u.estado
-            FROM usuarios as u
+            FROM usuario as u
             where u.correo=#{corr}
 
     </select>
@@ -32,10 +34,11 @@
         SELECT
             u.correo,
             u.nombreusuario,
+            u.clave,
             u.nombre,
             u.apellido,
             u.estado
-            FROM usuarios AS u
+            FROM usuario AS u
 
     </select>
 </mapper>

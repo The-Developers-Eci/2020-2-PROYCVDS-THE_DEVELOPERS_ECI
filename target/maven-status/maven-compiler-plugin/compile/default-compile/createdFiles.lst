@@ -7,6 +7,7 @@ edu\eci\cvds\sample\factory\ServiceFactory.class
 edu\eci\cvds\sample\factory\ServiceFactory$1.class
 edu\eci\cvds\sample\services\ServiceHistorialEquipos.class
 edu\eci\cvds\sampleprj\dao\mybatis\mappers\UsuarioMapper.class
+edu\eci\cvds\bean\LoginBean.class
 edu\eci\cvds\sample\services\ExcepcionServiceHistorialEquipos.class
 edu\eci\cvds\sample\services\impl\ServiceHistorialEquiposImpl.class
 edu\eci\cvds\sampleprj\dao\UsersDAO.class
