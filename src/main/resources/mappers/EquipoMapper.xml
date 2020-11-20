@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="edu.eci.cvds.sampleprj.dao.mybatis.mappers.EquipoMapper">
+
+    <select parameterType="map" id="consultarEquipos" resultMap="EquiposResult">
+
+        SELECT
+            eq.id_equipo as idEquipo,
+            eq.referencia,
+            eq.marca,
+            eq.serial_equipo,
+            eq.disponible,
+            eq.laboratorio_asociado,
+            eq.id_novedad
+            FROM equipos AS eq
+    </select>
+
+    <resultMap type='Equipo' id='EquiposResult'>
+        <id property='idEquipo' column='idEquipo'/>
+        <result property='referencia' column='referencia'/>
+        <result property='marca' column='marca'/>
+        <result property='serialEquipo' column='serial_equipo'/>
+        <result property='disponible' column='disponible'/>
+        <result property='laboratorioAsociado' column='laboratorio_asociado'/>
+        <result property='idNovedad' column='id_novedad'/>
+    </resultMap>
+</mapper>
