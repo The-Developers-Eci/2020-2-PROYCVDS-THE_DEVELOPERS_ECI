@@ -39,12 +39,12 @@
         e.referencia,
         e.disponible,
         e.equipoasociado
-        FROM elementoo as e
+        FROM elemento as e
 
     </select>
 
     <insert parameterType="map" id="agregarElemento">
-        INSERT INTO public.elementoo
+        INSERT INTO public.elemento
         (tipo, marca, referencia)
         VALUES(#{tip},#{marc},#{ref})
     </insert>
