@@ -1,6 +1,7 @@
 package edu.eci.cvds.sampleprj.dao;
 
 import edu.eci.cvds.sample.entities.Elemento;
+import org.mybatis.guice.transactional.Transactional;
 import java.util.List;
 
 public interface ElementoDAO {
@@ -9,4 +10,6 @@ public interface ElementoDAO {
 
     public List<Elemento> consultarElementos() throws PersistenceException;
 
+    @Transactional
+    public void agregarElemento(String numeroSerial, String tipo, String marca, String referencia, boolean disponible, String equipoAsociado) throws PersistenceException;
 }

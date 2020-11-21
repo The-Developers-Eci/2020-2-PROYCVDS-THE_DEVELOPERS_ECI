@@ -33,4 +33,14 @@ public class MyBatisElementoDao implements ElementoDAO{
             throw new UnsupportedOperationException("Error al consultar los elementos:"+e.getLocalizedMessage(), e);
         }
     }
+
+    @Override
+    public void agregarElemento(String numeroSerial, String tipo, String marca, String referencia, boolean disponible, String equipoAsociado) throws PersistenceException {
+        try
+        {
+            elementoMapper.agregarElemento(numeroSerial,tipo,marca,referencia,disponible,equipoAsociado);
+        }catch(Exception e){
+            throw new UnsupportedOperationException("Error al insertar el elemento: "+e.getLocalizedMessage(), e);
+        }
+    }
 }

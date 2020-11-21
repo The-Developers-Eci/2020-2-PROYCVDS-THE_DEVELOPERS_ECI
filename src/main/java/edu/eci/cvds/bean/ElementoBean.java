@@ -30,6 +30,10 @@ public class ElementoBean {
         this.elementos = usuarios;
     }
 
+    public void agregarElemento(String numeroSerial, String tipo, String marca, String referencia, boolean disponible, String equipoAsociado) throws ExcepcionServiceHistorialEquipos {
+        serviceElemento.agregarElemento(numeroSerial,tipo,marca,referencia,disponible,equipoAsociado);
+    }
+
     public ElementoBean(){
         serviceElemento = ServiceFactory.getInstance().getServiceElemento();
         try{

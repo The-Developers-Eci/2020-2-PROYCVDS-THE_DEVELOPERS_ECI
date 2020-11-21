@@ -30,4 +30,13 @@ public class ServiceElementoImpl implements ServiceElemento {
             throw new UnsupportedOperationException("No se pudo consultar los elementos ", e);
         }
     }
+
+    @Override
+    public void agregarElemento(String numeroSerial, String tipo, String marca, String referencia, boolean disponible, String equipoAsociado) throws ExcepcionServiceHistorialEquipos {
+        try {
+            elementoDAO.agregarElemento(numeroSerial,tipo,marca,referencia,disponible,equipoAsociado);
+        } catch (PersistenceException e) {
+            throw new UnsupportedOperationException("No se insertar el elemento ", e);
+        }
+    }
 }

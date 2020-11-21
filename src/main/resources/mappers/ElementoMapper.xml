@@ -42,4 +42,10 @@
         FROM elemento as e
 
     </select>
+
+    <insert parameterType="map" id="agregarElemento">
+        INSERT INTO public.elemento
+        (numeroserial, tipo, marca, referencia, disponible, equipoasociado)
+        VALUES(#{numser},#{tip},#{marc},#{ref},#{disp},#{equipaso})
+    </insert>
 </mapper>
