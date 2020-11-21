@@ -3,7 +3,7 @@ package edu.eci.cvds.sample.services;
 import edu.eci.cvds.sampleprj.dao.PersistenceException;
 
 public class ExcepcionServiceHistorialEquipos extends Exception {
-        public ExcepcionServiceHistorialEquipos(String string) {
+	public ExcepcionServiceHistorialEquipos(String string) {
 		super(string);
 	}
         

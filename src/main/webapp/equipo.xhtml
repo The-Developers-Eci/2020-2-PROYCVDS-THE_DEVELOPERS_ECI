@@ -10,7 +10,7 @@
 <h:body>
     <center>
         <p:dataTable value="#{equipoBean.consultarEquipos()}" var="equipo" styleClass = "Table" paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {Exporters}"
-                     paginator="true" rows="10" style="width:450px;" >
+                     paginator="true" rows="10" style="width:1300px;" >
             <p:column headerText="idEquipo">
                 <p:outputLabel value="#{equipo.idEquipo}"/>
             </p:column>
@@ -31,6 +31,29 @@
             </p:column>
             <p:column headerText="idNovedad">
                 <p:outputLabel value="#{equipo.idNovedad}"/>
+            </p:column>
+        </p:dataTable>
+        <br/>
+        <br/>
+        <p:dataTable value="#{Elemento.elementos}" var="elm" styleClass = "Table" paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {Exporters}"
+                     paginator="true" rows="10" style="width:1300px;" >
+            <p:column headerText="Numero Serial">
+                <p:outputLabel value="#{elm.numeroSerial}"/>
+            </p:column>
+            <p:column headerText="Tipo">
+                <p:outputLabel value="#{elm.tipo}"/>
+            </p:column>
+            <p:column headerText="Marca">
+                <p:outputLabel value="#{elm.marca}"/>
+            </p:column>
+            <p:column headerText="Referencia">
+                <p:outputLabel value="#{elm.referencia}"/>
+            </p:column>
+            <p:column headerText="Disponible">
+                <p:outputLabel value="#{elm.disponible}"/>
+            </p:column>
+            <p:column headerText="Equipo Asociado">
+                <p:outputLabel value="#{elm.equipoAsociado}"/>
             </p:column>
         </p:dataTable>
     </center>

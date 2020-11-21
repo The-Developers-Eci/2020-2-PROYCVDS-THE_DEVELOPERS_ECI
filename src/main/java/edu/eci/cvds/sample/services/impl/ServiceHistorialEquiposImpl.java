@@ -4,10 +4,8 @@ import java.util.List;
 
 import com.google.inject.Inject;
 
-import edu.eci.cvds.sample.entities.Equipo;
 import edu.eci.cvds.sample.entities.User;
 import edu.eci.cvds.sample.services.ServiceHistorialEquipos;
-import edu.eci.cvds.sampleprj.dao.EquipoDAO;
 import edu.eci.cvds.sampleprj.dao.UsersDAO;
 import edu.eci.cvds.sampleprj.dao.PersistenceException;
 import edu.eci.cvds.sample.services.ExcepcionServiceHistorialEquipos;
@@ -22,20 +20,16 @@ public class ServiceHistorialEquiposImpl implements ServiceHistorialEquipos {
         try {
             return UserDAO.consultarUsuario(correo);
         } catch (PersistenceException ex) {
-            throw new UnsupportedOperationException("No se pudo consultar el usuario " + correo, ex); //To change body of generated methods, choose Tools | Templates.
+            throw new UnsupportedOperationException("No se pudo consultar el usuario " + correo, ex);
         }
     }
-
 
     @Override
     public List<User> consultarUsuarios() throws ExcepcionServiceHistorialEquipos {
         try {
             return UserDAO.consultarUsuarios();
         } catch (PersistenceException ex) {
-            throw new UnsupportedOperationException("No se pudo consultar los usuarios ", ex); //To change body of generated methods, choose Tools | Templates.
+            throw new UnsupportedOperationException("No se pudo consultar los usuarios ", ex);
         }
     }
-
-
-
 }

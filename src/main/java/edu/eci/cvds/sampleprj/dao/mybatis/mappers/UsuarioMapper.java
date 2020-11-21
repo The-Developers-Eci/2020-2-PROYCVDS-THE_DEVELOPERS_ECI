@@ -6,7 +6,7 @@ import org.apache.ibatis.annotations.Param;
 
 public interface UsuarioMapper {
 
-    public User consultarUsuario(@Param("corr")String correo );
+    public User consultarUsuario(@Param("corr")String numeroSerial );
 
     public List<User> consultarUsuarios();
     

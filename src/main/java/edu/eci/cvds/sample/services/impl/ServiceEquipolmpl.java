@@ -13,6 +13,7 @@ public class ServiceEquipolmpl implements ServiceEquipo {
 
     @Inject
     private EquipoDAO equipoDAO;
+
     @Override
     public List<Equipo> consultarEquipos() throws ExcepcionServiceHistorialEquipos {
         try {

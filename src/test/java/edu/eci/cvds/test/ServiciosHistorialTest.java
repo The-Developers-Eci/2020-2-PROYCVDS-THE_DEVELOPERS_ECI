@@ -28,7 +28,7 @@ public class ServiciosHistorialTest {
         ServicioHE = ServiceFactory.getInstance().getServiceHistorialEquipos();
         serviceEquipo = ServiceFactory.getInstance().getServiceEquipo();
     }
-
+/*
     @Test
     public void ConsultarEquipo (){
         try{
@@ -38,6 +38,6 @@ public class ServiciosHistorialTest {
             e.printStackTrace();
             Assert.assertTrue(false);
         }
-    }
+    }*/
 }
 
