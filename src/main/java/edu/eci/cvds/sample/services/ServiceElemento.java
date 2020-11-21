@@ -11,5 +11,5 @@ public interface ServiceElemento {
     List<Elemento> consultarElementos() throws ExcepcionServiceHistorialEquipos;
 
     @Transactional
-    void agregarElemento(String numeroSerial, String tipo, String marca, String referencia, boolean disponible, String equipoAsociado) throws ExcepcionServiceHistorialEquipos;
+    void agregarElemento(String tipo, String marca, String referencia) throws ExcepcionServiceHistorialEquipos;
 }

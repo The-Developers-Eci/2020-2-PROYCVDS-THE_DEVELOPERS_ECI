@@ -35,10 +35,10 @@ public class MyBatisElementoDao implements ElementoDAO{
     }
 
     @Override
-    public void agregarElemento(String numeroSerial, String tipo, String marca, String referencia, boolean disponible, String equipoAsociado) throws PersistenceException {
+    public void agregarElemento(String tipo, String marca, String referencia) throws PersistenceException {
         try
         {
-            elementoMapper.agregarElemento(numeroSerial,tipo,marca,referencia,disponible,equipoAsociado);
+            elementoMapper.agregarElemento(tipo,marca,referencia);
         }catch(Exception e){
             throw new UnsupportedOperationException("Error al insertar el elemento: "+e.getLocalizedMessage(), e);
         }

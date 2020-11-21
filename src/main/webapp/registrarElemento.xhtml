@@ -14,6 +14,19 @@
             color: black;
             font: bold 125% monospace;
         }
+        .column {
+            float: left;
+            width: 33.33%;
+        }
+        .boton{
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 20px;
+            color: #ffffff;
+            background-color: #1883ba;
+            border-radius: 6px;
+            border: 2px solid #0016b0;
+        }
     </style>
 </h:head>
 
@@ -22,39 +35,60 @@
     <br/>
     <h:form id="registroEquipo">
         <center>
-            <p:inputText binding="#{serial}"></p:inputText>
-            <p:inputText binding="#{tipo}"></p:inputText>
-            <p:inputText binding="#{marca}"></p:inputText>
-            <p:inputText binding="#{ref}"></p:inputText>
-            <p:inputText binding="#{disp}"></p:inputText>
-            <p:inputText binding="#{equipaso}"></p:inputText>
-            <br/>
-            <br/>
-            <p:commandButton update="registroEquipo" actionListener="#{Elemento.agregarElemento(serial.value,tipo.value,marca.value,ref.value,disp.value,equipaso.value)}" value="Ingresar"></p:commandButton>
-            <br/>
-            <br/>
-            <br/>
-            <p:dataTable value="#{Elemento.elementos}" var="elm" styleClass = "Table" paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {Exporters}"
-                         paginator="true" rows="10" style="width:1300px;" >
+            <h1>Registrar un Elemento</h1>
+            <div class="row">
+                <div class="column">
+                    <h2>Tipo</h2>
+                    <p:selectOneMenu id="Tipo" name="Tipo" binding="#{tipo}" style="width:187px">
+                        <f:selectItem itemLabel="-"/>
+                        <f:selectItem itemLabel="Torre" itemValue="torre"/>
+                        <f:selectItem itemLabel="Mouse" itemValue="mouse"/>
+                        <f:selectItem itemLabel="Teclado" itemValue="teclado"/>
+                        <f:selectItem itemLabel="Pantalla" itemValue="pantalla"/>
+                    </p:selectOneMenu>
+                </div>
+                <div class="column">
+                    <h2>Marca</h2>
+                    <p:inputText name="Marca" binding="#{marca}"></p:inputText>
+                </div>
+                <div class="column">
+                    <h2>Referencia</h2>
+                    <p:inputText name="Referencia" binding="#{ref}"></p:inputText>
+                </div>
+            </div>
+            <br/><br/><br/><br/><br/><br/><br/>
+            <p:commandButton class="boton" update="registroEquipo" actionListener="#{Elemento.agregarElemento(tipo.value,marca.value,ref.value)}" value="Ingresar"></p:commandButton>
+            <br/><br/><br/>
+            <p:dataTable id="tabla" value="#{Elemento.elementos}" var="elm" rows="100" style="width:1300px;" scrollable="true" scrollHeight="400" sortBy="#{elm.tipo}"
+                         expandableRowGroups="true">
+                <f:facet name="header">
+                    ELEMENTOS REGISTRADOS
+                </f:facet>
+                <p:headerRow>
+                    <p:column colspan="6">
+                        <h:outputText value="#{elm.tipo}" />
+                    </p:column>
+                </p:headerRow>
                 <p:column headerText="Numero Serial">
-                    <p:outputLabel value="#{elm.numeroSerial}"/>
+                    <center><p:outputLabel value="#{elm.numeroSerial}"/></center>
                 </p:column>
                 <p:column headerText="Tipo">
-                    <p:outputLabel value="#{elm.tipo}"/>
+                    <center><p:outputLabel value="#{elm.tipo}"/></center>
                 </p:column>
                 <p:column headerText="Marca">
-                    <p:outputLabel value="#{elm.marca}"/>
+                    <center><p:outputLabel value="#{elm.marca}"/></center>
                 </p:column>
                 <p:column headerText="Referencia">
-                    <p:outputLabel value="#{elm.referencia}"/>
+                    <center><p:outputLabel value="#{elm.referencia}"/></center>
                 </p:column>
                 <p:column headerText="Disponible">
-                    <p:outputLabel value="#{elm.disponible}"/>
+                    <center><p:outputLabel value="#{elm.disponible}"/></center>
                 </p:column>
                 <p:column headerText="Equipo Asociado">
-                    <p:outputLabel value="#{elm.equipoAsociado}"/>
+                    <center><p:outputLabel value="#{elm.equipoAsociado}"/></center>
                 </p:column>
             </p:dataTable>
+            <br/>
         </center>
     </h:form>
 </h:body>

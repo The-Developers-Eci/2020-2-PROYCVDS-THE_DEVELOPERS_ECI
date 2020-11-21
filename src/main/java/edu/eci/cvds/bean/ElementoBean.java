@@ -2,6 +2,7 @@ package edu.eci.cvds.bean;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ApplicationScoped;
+import javax.faces.bean.ViewScoped;
 import javax.faces.bean.ManagedBean;
 
 import edu.eci.cvds.sample.services.ServiceElemento;
@@ -14,7 +15,8 @@ import edu.eci.cvds.sample.factory.ServiceFactory;
 import java.util.List;
 
 @ManagedBean(name = "Elemento")
-@ApplicationScoped
+@ViewScoped
+//@ApplicationScoped
 
 public class ElementoBean {
 
@@ -30,8 +32,8 @@ public class ElementoBean {
         this.elementos = usuarios;
     }
 
-    public void agregarElemento(String numeroSerial, String tipo, String marca, String referencia, boolean disponible, String equipoAsociado) throws ExcepcionServiceHistorialEquipos {
-        serviceElemento.agregarElemento(numeroSerial,tipo,marca,referencia,disponible,equipoAsociado);
+    public void agregarElemento(String tipo, String marca, String referencia) throws ExcepcionServiceHistorialEquipos {
+        serviceElemento.agregarElemento(tipo,marca,referencia);
     }
 
     public ElementoBean(){

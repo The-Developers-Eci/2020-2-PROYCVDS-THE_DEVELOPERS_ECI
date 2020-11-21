@@ -12,6 +12,5 @@ public interface ElementoMapper {
     public List<Elemento> consultarElementos();
 
     @Transactional
-    public void agregarElemento(@Param("numser")String numeroSerial,@Param("tip")String tipo,@Param("marc")String marca,
-                                    @Param("ref")String referencia,@Param("disp")boolean disponible,@Param("equipaso")String equipoAsociado);
+    public void agregarElemento(@Param("tip")String tipo,@Param("marc")String marca,@Param("ref")String referencia);
 }

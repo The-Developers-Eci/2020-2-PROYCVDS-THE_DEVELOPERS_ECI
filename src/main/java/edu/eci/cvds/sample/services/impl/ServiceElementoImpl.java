@@ -32,9 +32,9 @@ public class ServiceElementoImpl implements ServiceElemento {
     }
 
     @Override
-    public void agregarElemento(String numeroSerial, String tipo, String marca, String referencia, boolean disponible, String equipoAsociado) throws ExcepcionServiceHistorialEquipos {
+    public void agregarElemento(String tipo, String marca, String referencia) throws ExcepcionServiceHistorialEquipos {
         try {
-            elementoDAO.agregarElemento(numeroSerial,tipo,marca,referencia,disponible,equipoAsociado);
+            elementoDAO.agregarElemento(tipo,marca,referencia);
         } catch (PersistenceException e) {
             throw new UnsupportedOperationException("No se insertar el elemento ", e);
         }

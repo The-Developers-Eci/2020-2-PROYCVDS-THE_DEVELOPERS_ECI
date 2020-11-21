@@ -11,5 +11,5 @@ public interface ElementoDAO {
     public List<Elemento> consultarElementos() throws PersistenceException;
 
     @Transactional
-    public void agregarElemento(String numeroSerial, String tipo, String marca, String referencia, boolean disponible, String equipoAsociado) throws PersistenceException;
+    public void agregarElemento(String tipo, String marca, String referencia) throws PersistenceException;
 }
