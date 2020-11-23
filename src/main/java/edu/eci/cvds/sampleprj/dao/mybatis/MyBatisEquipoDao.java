@@ -9,6 +9,7 @@ import edu.eci.cvds.sampleprj.dao.mybatis.mappers.EquipoMapper;
 import java.util.List;
 
 public class MyBatisEquipoDao implements EquipoDAO {
+
     @Inject
     private EquipoMapper equipoMapper;
 

@@ -18,7 +18,7 @@
 
     <select parameterType="map" id="consultarElemento" resultMap="ElementoResult">
 
-        select
+        SELECT
         e.numeroserial,
         e.tipo,
         e.marca,
@@ -26,13 +26,13 @@
         e.disponible,
         e.equipoasociado
         FROM elemento as e
-        where e.numeroserial=#{numser}
+        WHERE e.numeroserial=#{numser}
 
     </select>
 
     <select parameterType="map" id="consultarElementos" resultMap="ElementoResult">
 
-        select
+        SELECT
         e.numeroserial,
         e.tipo,
         e.marca,
@@ -40,6 +40,20 @@
         e.disponible,
         e.equipoasociado
         FROM elemento as e
+
+    </select>
+
+    <select parameterType="map" id="consultarElementosEquipo" resultMap="ElementoResult">
+
+        SELECT
+        e.numeroserial,
+        e.tipo,
+        e.marca,
+        e.referencia,
+        e.disponible,
+        e.equipoasociado
+        FROM elemento as e
+        WHERE e.equipoasociado=#{equipo}
 
     </select>
 
@@ -48,4 +62,5 @@
         (tipo, marca, referencia)
         VALUES(#{tip},#{marc},#{ref})
     </insert>
+
 </mapper>

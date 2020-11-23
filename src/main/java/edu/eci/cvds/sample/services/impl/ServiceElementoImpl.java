@@ -14,7 +14,7 @@ public class ServiceElementoImpl implements ServiceElemento {
     private ElementoDAO elementoDAO;
 
     @Override
-    public Elemento consultarElemento(String numeroSerial) throws ExcepcionServiceHistorialEquipos {
+    public Elemento consultarElemento(int numeroSerial) throws ExcepcionServiceHistorialEquipos {
         try {
             return elementoDAO.consultarElemento(numeroSerial);
         } catch (PersistenceException e) {
@@ -26,6 +26,15 @@ public class ServiceElementoImpl implements ServiceElemento {
     public List<Elemento> consultarElementos() throws ExcepcionServiceHistorialEquipos {
         try {
             return elementoDAO.consultarElementos();
+        } catch (PersistenceException e) {
+            throw new UnsupportedOperationException("No se pudo consultar los elementos ", e);
+        }
+    }
+
+    @Override
+    public List<Elemento> consultarElementosEquipo(int equipo) throws ExcepcionServiceHistorialEquipos {
+        try {
+            return elementoDAO.consultarElementosEquipo(equipo);
         } catch (PersistenceException e) {
             throw new UnsupportedOperationException("No se pudo consultar los elementos ", e);
         }

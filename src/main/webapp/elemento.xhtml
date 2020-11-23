@@ -21,12 +21,12 @@
         }
         .boton{
             text-decoration: none;
-            padding: 10px;
+            padding: 0px;
             font-weight: 600;
             font-size: 20px;
             color: #ffffff;
             background-color: #1883ba;
-            border-radius: 6px;
+            border-radius: 0px;
             border: 2px solid #0016b0;
         }
     </style>
@@ -41,9 +41,7 @@
         <div>
             <h:form>
                 <br/>
-                <a class="boton" href="registrarElemento.xhtml">
-                    Registrar Elemento
-                </a>
+                <p:button class="boton" value="Registrar Elemento" outcome="registrarElemento.xhtml"/>
                 <br/>
                 <br/>
             </h:form>
@@ -52,9 +50,16 @@
         <div>
             <h:form>
                 <br/>
-                <a class="boton" href="">
-                    Reporte de Elementos
-                </a>
+                <p:button class="boton" value="Reporte de Elementos"/>
+                <br/>
+                <br/>
+            </h:form>
+        </div>
+        <br/>
+        <div>
+            <h:form>
+                <br/>
+                <p:button class="boton" value="Consulta de Elementos" outcome="consultaElementos.xhtml"/>
                 <br/>
                 <br/>
             </h:form>

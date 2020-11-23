@@ -7,7 +7,7 @@
       lang="es">
 
 <h:head>
-    <title>Registro de Elementos</title>
+    <title>Registro de Equipos</title>
     <style>
         body{
             background: rgb(100, 100, 100);
@@ -33,7 +33,7 @@
 
 <h:body>
     <br/>
-    <h:form id="registroElemento">
+    <h:form id="registroEquipo">
         <a class="boton" href="elemento.xhtml">
             Atrás
         </a>
@@ -60,7 +60,7 @@
                 </div>
             </div>
             <br/><br/><br/><br/><br/><br/><br/>
-            <p:commandButton class="boton" update="tabla" actionListener="#{Elemento.agregarElemento(tipo.value,marca.value,ref.value)}" value="Ingresar"></p:commandButton>
+            <p:commandButton class="boton" update="registroElemento" actionListener="#{Elemento.agregarElemento(tipo.value,marca.value,ref.value)}" value="Ingresar"></p:commandButton>
             <br/><br/><br/>
             <p:dataTable id="tabla" value="#{Elemento.elementos}" var="elm" rows="100" style="width:1300px;" scrollable="true" scrollHeight="400" sortBy="#{elm.tipo}"
                          expandableRowGroups="true">

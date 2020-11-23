@@ -19,8 +19,7 @@ public class ServiceEquipolmpl implements ServiceEquipo {
         try {
             return equipoDAO.consultarEquipos();
         } catch (PersistenceException ex) {
-            throw new UnsupportedOperationException("No se pudo consultar los elementos ", ex); //To change body of generated methods, choose Tools | Templates.
+            throw new UnsupportedOperationException("No se pudo consultar los equipos ", ex);
         }
-
     }
 }

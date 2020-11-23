@@ -15,7 +15,7 @@ public class MyBatisElementoDao implements ElementoDAO{
     private ElementoMapper elementoMapper;
 
     @Override
-    public Elemento consultarElemento(String numeroSerial) throws PersistenceException {
+    public Elemento consultarElemento(int numeroSerial) throws PersistenceException {
         try
         {
             return elementoMapper.consultarElemento(numeroSerial);
@@ -29,6 +29,16 @@ public class MyBatisElementoDao implements ElementoDAO{
         try
         {
             return elementoMapper.consultarElementos();
+        }catch(Exception e){
+            throw new UnsupportedOperationException("Error al consultar los elementos:"+e.getLocalizedMessage(), e);
+        }
+    }
+
+    @Override
+    public List<Elemento> consultarElementosEquipo(int equipo) throws PersistenceException {
+        try
+        {
+            return elementoMapper.consultarElementosEquipo(equipo);
         }catch(Exception e){
             throw new UnsupportedOperationException("Error al consultar los elementos:"+e.getLocalizedMessage(), e);
         }

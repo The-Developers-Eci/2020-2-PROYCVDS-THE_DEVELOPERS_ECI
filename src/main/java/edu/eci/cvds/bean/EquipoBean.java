@@ -16,7 +16,6 @@ import java.util.List;
 @ManagedBean(name = "equipoBean")
 @SessionScoped
 public class EquipoBean extends BasePageBean{
-    private static final long serialVersionUID=1L;
 
     @Inject
     private ServiceEquipo serviceEquipo;

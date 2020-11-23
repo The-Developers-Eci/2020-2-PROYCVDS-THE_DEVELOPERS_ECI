@@ -1,81 +1,63 @@
 package edu.eci.cvds.sample.entities;
+
 import java.io.Serializable;
+
 public class Equipo implements Serializable{
-    private int idEquipo;
-    private String referencia;
-    private String marca;
-    private String serialEquipo;
-    private Boolean disponible;
-    private String laboratorioAsociado;
-    private String idNovedad;
 
-    public Equipo(int idEquipo, String referencia, String marca, String serialEquipo){
+    private String idEquipo;
+    private String nombre;
+    private boolean disponible;
+    private String labAsociado;
+    private boolean activo;
+
+    public Equipo(String idEquipo, String nombre, boolean disponible, String labAsociado, boolean activo){
         this.idEquipo = idEquipo;
-        this.referencia = referencia;
-        this.marca = marca;
-        this.serialEquipo = serialEquipo;
+        this.nombre = nombre;
         this.disponible = disponible;
-        this.laboratorioAsociado = laboratorioAsociado;
-        this.idNovedad = idNovedad;
+        this.labAsociado = labAsociado;
+        this.disponible = disponible;
+        this.activo = activo;
     }
 
-    public Equipo() {
-    }
+    public Equipo() { }
 
-
-    public int getIdEquipo() {
+    public String getIdEquipo() {
         return idEquipo;
     }
 
-    public void setIdEquipo(int idEquipo) {
+    public void setIdEquipo(String idEquipo) {
         this.idEquipo = idEquipo;
     }
 
-    public String getReferencia() {
-        return referencia;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setReferencia(String referencia) {
-        this.referencia = referencia;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public String getMarca() {
-        return marca;
-    }
-
-    public void setMarca(String marca) {
-        this.marca = marca;
-    }
-
-    public String getSerialEquipo() {
-        return serialEquipo;
-    }
-
-    public void setSerialEquipo(String serialEquipo) {
-        this.serialEquipo = serialEquipo;
-    }
-
-    public Boolean getDisponible() {
+    public boolean getDisponible() {
         return disponible;
     }
 
-    public void setDisponible(Boolean disponible) {
+    public void setDisponible(boolean disponible) {
         this.disponible = disponible;
     }
 
-    public String getLaboratorioAsociado() {
-        return laboratorioAsociado;
+    public String getLabAsociado() {
+        return labAsociado;
     }
 
-    public void setLaboratorioAsociado(String laboratorioAsociado) {
-        this.laboratorioAsociado = laboratorioAsociado;
+    public void setLabAsociado(String labAsociado) {
+        this.labAsociado = labAsociado;
     }
 
-    public String getIdNovedad() {
-        return idNovedad;
+    public boolean getActivo() {
+        return activo;
     }
 
-    public void setIdNovedad(String idNovedad) {
-        this.idNovedad = idNovedad;
+    public void setActivo(boolean activo) {
+        this.activo = activo;
     }
 }
