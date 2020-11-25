@@ -12,6 +12,10 @@ public interface ServiceElemento {
 
     List<Elemento> consultarElementosEquipo(int equipo) throws ExcepcionServiceHistorialEquipos;
 
+    List<Elemento> consultarElementosTipo(String tipo) throws ExcepcionServiceHistorialEquipos;
+
+    void asociarElemento(int equipoId, String marca, String referencia) throws ExcepcionServiceHistorialEquipos;
+
     @Transactional
     void agregarElemento(String tipo, String marca, String referencia) throws ExcepcionServiceHistorialEquipos;
 }

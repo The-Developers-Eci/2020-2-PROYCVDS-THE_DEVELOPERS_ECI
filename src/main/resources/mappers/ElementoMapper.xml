@@ -57,10 +57,29 @@
 
     </select>
 
+    <select parameterType="map" id="consultarElementosTipo" resultMap="ElementoResult">
+
+        SELECT
+        e.numeroserial,
+        e.tipo,
+        e.marca,
+        e.referencia,
+        e.disponible,
+        e.equipoasociado
+        FROM elemento as e
+        WHERE e.tipo=#{tipo} AND e.disponible=true
+
+    </select>
+
     <insert parameterType="map" id="agregarElemento">
         INSERT INTO public.elemento
         (tipo, marca, referencia)
         VALUES(#{tip},#{marc},#{ref})
     </insert>
 
+    <update parameterType="map" id="asociarElemento">
+        UPDATE elemento
+        SET equipoasociado=#{eqid}, disponible=false
+        WHERE marca=#{marc} AND referencia=#{ref}
+    </update>
 </mapper>

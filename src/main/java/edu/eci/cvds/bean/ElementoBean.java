@@ -13,6 +13,7 @@ import edu.eci.cvds.sample.services.ExcepcionServiceHistorialEquipos;
 import edu.eci.cvds.sample.entities.Elemento;
 import edu.eci.cvds.sample.factory.ServiceFactory;
 
+import java.util.stream.Collectors;
 import java.util.List;
 
 @ManagedBean(name = "Elemento")
@@ -22,9 +23,14 @@ import java.util.List;
 public class ElementoBean {
 
     private final ServiceElemento serviceElemento;
-    public List<Elemento> elementos;
-    public List<Elemento> elementosEquipo;
-    public Elemento elemento;
+
+    public List<Elemento> elementos;//Todos los Elementos
+    public List<Elemento> elementosEquipo;//Elementos que Pertenecen a un Equipo
+    public List<Elemento> torres;
+    public List<Elemento> mouses;
+    public List<Elemento> teclados;
+    public List<Elemento> pantallas;
+    public Elemento elemento;//Elemento en Específico
 
     //GET y SET
     public List<Elemento> getElementos() {
@@ -53,6 +59,26 @@ public class ElementoBean {
     public List<Elemento> consultarElementosEquipo(int equipo) throws ExcepcionServiceHistorialEquipos {
         elementosEquipo = serviceElemento.consultarElementosEquipo(equipo);
         return elementosEquipo;
+    }
+
+    public List<Elemento> consultarTorres() throws ExcepcionServiceHistorialEquipos {
+        torres = serviceElemento.consultarElementosTipo("torre");
+        return torres;
+    }
+
+    public List<Elemento> consultarMouses() throws ExcepcionServiceHistorialEquipos {
+        mouses = serviceElemento.consultarElementosTipo("mouse");
+        return mouses;
+    }
+
+    public List<Elemento> consultarTeclados() throws ExcepcionServiceHistorialEquipos {
+        teclados = serviceElemento.consultarElementosTipo("teclado");
+        return teclados;
+    }
+
+    public List<Elemento> consultarPantallas() throws ExcepcionServiceHistorialEquipos {
+        pantallas = serviceElemento.consultarElementosTipo("pantalla");
+        return pantallas;
     }
 
     public void agregarElemento(String tipo, String marca, String referencia) throws ExcepcionServiceHistorialEquipos {

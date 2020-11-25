@@ -1,0 +1,70 @@
+body{
+    background: rgb(100, 100, 100);
+    color: black;
+    font: bold 125% monospace;
+}
+.botonInicio{
+    text-decoration: none;
+    padding: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+}
+
+.botonMenu{
+    text-decoration: none;
+    width: 300px;
+    height: 50px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border: 2px solid #0016b0;
+}
+.botonAtras{
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 0px;
+    border: 2px solid #0016b0;
+}
+
+.botonAccion{
+    text-decoration: none;
+    padding: 0px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 0px;
+    border: 2px solid #0016b0;
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+}
+
+.column2 {
+    float: left;
+    width: 25%;
+}
+
+.texto{
+    text-decoration: none;
+    padding: 6px;
+    font-weight: 600;
+    font-size: 20px;
+    color: #1883ba;
+    background-color: #ffffff;
+    border-radius: 0px;
+    border: 2px solid #0016b0;
+}
+
+.hola{
+    margin: 20px 150px 20px 300px;
+}

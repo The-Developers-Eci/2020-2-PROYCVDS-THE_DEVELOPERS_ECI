@@ -8,40 +8,19 @@
 
 <h:head>
     <title>Elementos</title>
-    <style>
-        body{
-            background: rgb(100, 100, 100);
-            color: black;
-            font: bold 125% monospace;
-        }
-
-        div{
-            background: rgb(180, 180, 180);
-            margin: 20px 600px 20px 600px;
-        }
-        .boton{
-            text-decoration: none;
-            padding: 0px;
-            font-weight: 600;
-            font-size: 20px;
-            color: #ffffff;
-            background-color: #1883ba;
-            border-radius: 0px;
-            border: 2px solid #0016b0;
-        }
-    </style>
+    <link href="css/estilos.css" rel="stylesheet" />
 </h:head>
 
 <h:body>
     <br/>
-    <a class="boton" href="inicio.xhtml">
-        Atrás
+    <a class="botonAtras" href="inicio.xhtml">
+        atrás
     </a>
     <center>
         <div>
             <h:form>
                 <br/>
-                <p:button class="boton" value="Registrar Elemento" outcome="registrarElemento.xhtml"/>
+                <p:button class="botonMenu" value="Registrar Elemento" outcome="registrarElemento.xhtml"/>
                 <br/>
                 <br/>
             </h:form>
@@ -50,7 +29,7 @@
         <div>
             <h:form>
                 <br/>
-                <p:button class="boton" value="Reporte de Elementos"/>
+                <p:button class="botonMenu" value="Reporte de Elementos"/>
                 <br/>
                 <br/>
             </h:form>
@@ -59,7 +38,7 @@
         <div>
             <h:form>
                 <br/>
-                <p:button class="boton" value="Consulta de Elementos" outcome="consultaElementos.xhtml"/>
+                <p:button class="botonMenu" value="Consulta de Elementos" outcome="consultaElementos.xhtml"/>
                 <br/>
                 <br/>
             </h:form>

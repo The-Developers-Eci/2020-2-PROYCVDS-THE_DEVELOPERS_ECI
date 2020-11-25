@@ -73,7 +73,10 @@ public class Elemento implements Serializable{
 
     @Override
     public String toString() {
+        return marca+"-"+referencia;
+    }
+    /*public String toString() {
         return "Elemento{ " + "numero serial= " + numeroSerial + ", tipo= " + tipo + ", marca= " +
                 marca + ", referencia= " + referencia + ", disponible= " + disponible + ", equipo asociado= " + equipoAsociado + '}';
-    }
+    }*/
 }

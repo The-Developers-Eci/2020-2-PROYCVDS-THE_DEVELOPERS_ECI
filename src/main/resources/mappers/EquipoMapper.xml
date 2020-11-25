@@ -24,4 +24,25 @@
         FROM equipo AS eq
 
     </select>
+
+    <select parameterType="map" id="consultarEquipo" resultMap="EquiposResult">
+
+        SELECT
+        eq.idequipo,
+        eq.nombre,
+        eq.disponible,
+        eq.labasociado,
+        eq.activo
+        FROM equipo AS eq
+        WHERE eq.nombre=#{nom}
+
+    </select>
+
+    <insert parameterType="map" id="agregarEquipo">
+
+        INSERT INTO public.equipo
+        (nombre)
+        VALUES(#{nom});
+
+    </insert>
 </mapper>

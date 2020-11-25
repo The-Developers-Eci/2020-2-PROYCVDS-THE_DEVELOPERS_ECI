@@ -8,34 +8,14 @@
 
 <h:head>
     <title>Registro de Elementos</title>
-    <style>
-        body{
-            background: rgb(100, 100, 100);
-            color: black;
-            font: bold 125% monospace;
-        }
-        .column {
-            float: left;
-            width: 33.33%;
-        }
-        .boton{
-            text-decoration: none;
-            padding: 0px;
-            font-weight: 600;
-            font-size: 20px;
-            color: #ffffff;
-            background-color: #1883ba;
-            border-radius: 0px;
-            border: 2px solid #0016b0;
-        }
-    </style>
+    <link href="css/estilos.css" rel="stylesheet" />
 </h:head>
 
 <h:body>
     <br/>
     <h:form id="registroElemento">
-        <a class="boton" href="elemento.xhtml">
-            Atrás
+        <a class="botonAtras" href="elemento.xhtml">
+            atrás
         </a>
         <center>
             <h1>Registrar un Elemento</h1>
@@ -60,7 +40,7 @@
                 </div>
             </div>
             <br/><br/><br/><br/><br/><br/><br/>
-            <p:commandButton class="boton" update="tabla" actionListener="#{Elemento.agregarElemento(tipo.value,marca.value,ref.value)}" value="Ingresar"></p:commandButton>
+            <p:commandButton class="botonAccion" update="tabla" actionListener="#{Elemento.agregarElemento(tipo.value,marca.value,ref.value)}" value="Registrar"></p:commandButton>
             <br/><br/><br/>
             <p:dataTable id="tabla" value="#{Elemento.elementos}" var="elm" rows="100" style="width:1300px;" scrollable="true" scrollHeight="400" sortBy="#{elm.tipo}"
                          expandableRowGroups="true">

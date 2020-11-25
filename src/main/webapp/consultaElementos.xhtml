@@ -8,51 +8,21 @@
 
 <h:head>
     <title>Consulta de elementos</title>
-    <style>
-        body{
-            background: rgb(100, 100, 100);
-            color: black;
-            font: bold 125% monospace;
-        }
-        .column {
-            float: left;
-            width: 33.33%;
-        }
-        .boton{
-            text-decoration: none;
-            padding: 0px;
-            font-weight: 600;
-            font-size: 20px;
-            color: #ffffff;
-            background-color: #1883ba;
-            border-radius: 0px;
-            border: 2px solid #0016b0;
-        }
-        .texto{
-            text-decoration: none;
-            padding: 6px;
-            font-weight: 600;
-            font-size: 20px;
-            color: #1883ba;
-            background-color: #ffffff;
-            border-radius: 0px;
-            border: 2px solid #0016b0;
-        }
-
-        .hola{
-            margin: 20px 150px 20px 300px;
-        }
-    </style>
+    <link href="css/estilos.css" rel="stylesheet" />
 </h:head>
 
 <h:body>
     <br/>
     <h:form id="registroElemento">
+        <a class="botonAtras" href="elemento.xhtml">
+            atrás
+        </a>
+        <center><h1>Consulta de Elementos</h1></center>
         <div class="hola">
             <h2>Elementos de un Equipo</h2>
             <div class="row">
                 <p:inputText class="texto" binding="#{equipo}"></p:inputText>
-                <p:commandButton class="boton" update="tabla" actionListener="#{Elemento.consultarElementosEquipo(equipo.value)}" value="Ingresar"></p:commandButton>
+                <p:commandButton class="botonAccion" update="tabla" actionListener="#{Elemento.consultarElementosEquipo(equipo.value)}" value="Ingresar"></p:commandButton>
             </div>
         </div>
 
@@ -91,7 +61,7 @@
             <h2>Buscar Elemento</h2>
             <div class="row">
                 <p:inputText class="texto" binding="#{numero}"></p:inputText>
-                <p:commandButton class="boton" update="tabla1" actionListener="#{Elemento.consultarElemento(numero.value)}" value="Ingresar"></p:commandButton>
+                <p:commandButton class="botonAccion" update="tabla1" actionListener="#{Elemento.consultarElemento(numero.value)}" value="Ingresar"></p:commandButton>
             </div>
         </div>
 

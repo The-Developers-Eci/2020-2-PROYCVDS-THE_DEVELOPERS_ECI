@@ -3,6 +3,7 @@ import com.google.inject.Inject;
 import edu.eci.cvds.sample.entities.Equipo;
 import edu.eci.cvds.sample.factory.ServiceFactory;
 import edu.eci.cvds.sample.services.ExcepcionServiceHistorialEquipos;
+import edu.eci.cvds.sample.services.ServiceElemento;
 import edu.eci.cvds.sample.services.ServiceEquipo;
 import edu.eci.cvds.sample.services.ServiceHistorialEquipos;
 import org.primefaces.PrimeFaces;
@@ -20,11 +21,34 @@ public class EquipoBean extends BasePageBean{
     @Inject
     private ServiceEquipo serviceEquipo;
 
-    public List<Equipo> equipos;
+    @Inject
+    private ServiceElemento serviceElemento;
 
+    //ATRIBUTOS
+    public List<Equipo> equipos;
+    public Equipo equipo;
+
+    //OPERATIONS
     public List<Equipo> consultarEquipos() throws ExcepcionServiceHistorialEquipos{
         equipos = serviceEquipo.consultarEquipos();
         return equipos;
+    }
+
+    public void registrarEquipo(String nombre,String mouse, String teclado, String pantalla, String torre) throws ExcepcionServiceHistorialEquipos{
+        serviceEquipo.agregarEquipo(nombre);
+        int idEquipo =  Integer.parseInt(serviceEquipo.consultarEquipo(nombre).getIdEquipo());
+        //ASOCIAR MOUSE
+        String[] datosMouse = mouse.split("-", 0);
+        serviceElemento.asociarElemento(idEquipo, datosMouse[0], datosMouse[1]);
+        //ASOCIAR TECLADO
+        String[] datosTeclado = teclado.split("-", 0);
+        serviceElemento.asociarElemento(idEquipo, datosTeclado[0], datosTeclado[1]);
+        //ASOCIAR PANTALLA
+        String[] datosPantalla = pantalla.split("-", 0);
+        serviceElemento.asociarElemento(idEquipo, datosPantalla[0], datosPantalla[1]);
+        //ASOCIAR TORRE
+        String[] datosTorre = torre.split("-", 0);
+        serviceElemento.asociarElemento(idEquipo, datosTorre[0], datosTorre[1]);
     }
 
     public void start(){}

@@ -41,6 +41,24 @@ public class ServiceElementoImpl implements ServiceElemento {
     }
 
     @Override
+    public List<Elemento> consultarElementosTipo(String tipo) throws ExcepcionServiceHistorialEquipos {
+        try {
+            return elementoDAO.consultarElementosTipo(tipo);
+        } catch (PersistenceException e) {
+            throw new UnsupportedOperationException("No se pudo consultar los elementos ", e);
+        }
+    }
+
+    @Override
+    public void asociarElemento(int equipoId, String marca, String referencia) throws ExcepcionServiceHistorialEquipos {
+        try {
+            elementoDAO.asociarElemento(equipoId,marca,referencia);
+        } catch (PersistenceException e) {
+            throw new UnsupportedOperationException("No se insertar el elemento ", e);
+        }
+    }
+
+    @Override
     public void agregarElemento(String tipo, String marca, String referencia) throws ExcepcionServiceHistorialEquipos {
         try {
             elementoDAO.agregarElemento(tipo,marca,referencia);

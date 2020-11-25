@@ -14,11 +14,11 @@ public class MyBatisEquipoDao implements EquipoDAO {
     private EquipoMapper equipoMapper;
 
     @Override
-    public Equipo consultarEquipo(int id) throws PersistenceException {
+    public Equipo consultarEquipo(String nombre) throws PersistenceException {
         try {
-            return equipoMapper.consultarEquipo(id);
+            return equipoMapper.consultarEquipo(nombre);
         } catch (Exception e) {
-            throw new UnsupportedOperationException("Error al consultar  los elementos:"+e.getLocalizedMessage(), e);
+            throw new UnsupportedOperationException("Error al consultar el equipo:"+e.getLocalizedMessage(), e);
         }
     }
 
@@ -27,7 +27,16 @@ public class MyBatisEquipoDao implements EquipoDAO {
         try {
             return equipoMapper.consultarEquipos();
         } catch (Exception e) {
-            throw new UnsupportedOperationException("Error al consultar  los elementos:"+e.getLocalizedMessage(), e);
+            throw new UnsupportedOperationException("Error al consultar los equipos:"+e.getLocalizedMessage(), e);
+        }
+    }
+
+    @Override
+    public void agregarEquipo(String nombre) throws PersistenceException {
+        try {
+            equipoMapper.agregarEquipo(nombre);
+        } catch (Exception e) {
+            throw new UnsupportedOperationException("Error al agregar el equipo:"+e.getLocalizedMessage(), e);
         }
     }
 }
