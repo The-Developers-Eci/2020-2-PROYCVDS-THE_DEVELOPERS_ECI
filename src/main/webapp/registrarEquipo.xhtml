@@ -20,9 +20,18 @@
         <center>
             <h1>Registrar un Equipo</h1>
             <h:form id="formulario">
+                <!---
+                    <div>
+                    <h2>Nombre del Equipo</h2>
+                    <p:inputText class="texto" type="String" binding="#{equipo}"></p:inputText>
+                </div>
+                -->
                 <div>
                     <h2>Nombre del Equipo</h2>
-                    <p:inputText class="texto" binding="#{equipo}"></p:inputText>
+                    <span class="ui-float-label">
+                       <p:inputText id="float-input" value="#{equipoBean.nombreEquipo}" />
+                       <p:outputLabel for="@previous" value="Nombre del equipo" />
+                   </span>
                 </div>
                 <br/><br/>
                 <div class="row">
@@ -53,14 +62,14 @@
                     <div class="column2">
                         <img src="assets/img/torre.png" height="100" width="100" />
                         <br/>
-                        <p:selectOneMenu id="torre" binding="#{torre}" style="width:200px">
+                        <p:selectOneMenu id="torre" binding="#{torre}" style="width:200px" update="formulario">
                             <f:selectItem itemLabel="-" itemValue="" />
                             <f:selectItems value="#{Elemento.consultarTorres()}" />
                         </p:selectOneMenu><br/><br/><br/>
                     </div>
                 </div>
                 <p:commandButton class="botonAccion" update="registroEquipo"
-                                 actionListener="#{equipoBean.registrarEquipo(equipo.value,mouse.value,teclado.value,pantalla.value,torre.value)}"
+                                 actionListener="#{equipoBean.registrarEquipo(mouse.value,teclado.value,pantalla.value,torre.value)}"
                                     value="Registrar"></p:commandButton>
             </h:form>
             <br/><br/>
@@ -83,6 +92,7 @@
                 </p:column>
                 -->
             </p:dataTable>
+            <label>#{equipo}</label>
         </center>
     </h:form>
 </h:body>

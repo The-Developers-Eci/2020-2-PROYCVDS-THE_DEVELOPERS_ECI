@@ -27,6 +27,7 @@ public class EquipoBean extends BasePageBean{
     //ATRIBUTOS
     public List<Equipo> equipos;
     public Equipo equipo;
+    public String nombreEquipo;
 
     //OPERATIONS
     public List<Equipo> consultarEquipos() throws ExcepcionServiceHistorialEquipos{
@@ -34,9 +35,9 @@ public class EquipoBean extends BasePageBean{
         return equipos;
     }
 
-    public void registrarEquipo(String nombre,String mouse, String teclado, String pantalla, String torre) throws ExcepcionServiceHistorialEquipos{
-        serviceEquipo.agregarEquipo(nombre);
-        int idEquipo =  Integer.parseInt(serviceEquipo.consultarEquipo(nombre).getIdEquipo());
+    public void registrarEquipo(String mouse, String teclado, String pantalla, String torre) throws ExcepcionServiceHistorialEquipos{
+        serviceEquipo.agregarEquipo(nombreEquipo);
+        int idEquipo =  Integer.parseInt(serviceEquipo.consultarEquipo(nombreEquipo).getIdEquipo());
         //ASOCIAR MOUSE
         String[] datosMouse = mouse.split("-", 0);
         serviceElemento.asociarElemento(idEquipo, datosMouse[0], datosMouse[1]);
@@ -51,6 +52,9 @@ public class EquipoBean extends BasePageBean{
         serviceElemento.asociarElemento(idEquipo, datosTorre[0], datosTorre[1]);
     }
 
+    public String getNombreEquipo() { return this.nombreEquipo; }
+
+    public void setNombreEquipo(String nombreEquipo){ this.nombreEquipo=nombreEquipo; }
     public void start(){}
 
     public void showMessage(String confirmacion) {
