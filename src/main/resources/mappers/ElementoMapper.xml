@@ -80,6 +80,6 @@
     <update parameterType="map" id="asociarElemento">
         UPDATE elemento
         SET equipoasociado=#{eqid}, disponible=false
-        WHERE marca=#{marc} AND referencia=#{ref}
+        WHERE marca=#{marc} AND referencia=#{ref} AND disponible=true
     </update>
 </mapper>
