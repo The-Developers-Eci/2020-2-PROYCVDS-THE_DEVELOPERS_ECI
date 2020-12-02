@@ -13,7 +13,10 @@ import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
 import javax.faces.bean.ManagedBean;
 import javax.faces.context.FacesContext;
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
 
 @ManagedBean(name = "equipoBean")
 @RequestScoped
@@ -29,6 +32,9 @@ public class EquipoBean extends BasePageBean{
     public List<Equipo> equipos;
     public Equipo equipo;
     public String nombreEquipo;
+
+    private Map<String, String> equiposMap;
+    private String selectedEquipo;
 
     //OPERATIONS
     public List<Equipo> consultarEquipos() throws ExcepcionServiceHistorialEquipos{
@@ -77,5 +83,28 @@ public class EquipoBean extends BasePageBean{
 
     public void setEquipos(List<Equipo> equipos) {
         this.equipos = equipos;
+    }
+
+    public Map<String, String> getEquiposMap() throws ExcepcionServiceHistorialEquipos {
+        ArrayList<Equipo> equiposTemp = (ArrayList<Equipo>) consultarEquipos();
+        equiposMap = new LinkedHashMap<String, String>();
+        for(Equipo equipo : equiposTemp){
+            if(equipo.getDisponible()){
+                equiposMap.put(equipo.getNombre(), equipo.getIdEquipo());
+            }
+        }
+        return equiposMap;
+    }
+
+    public void setEquiposMap(Map<String, String> equiposMap) {
+        this.equiposMap = equiposMap;
+    }
+
+    public String getSelectedEquipo() {
+        return selectedEquipo;
+    }
+
+    public void setSelectedEquipo(String selectedEquipo) {
+        this.selectedEquipo = selectedEquipo;
     }
 }

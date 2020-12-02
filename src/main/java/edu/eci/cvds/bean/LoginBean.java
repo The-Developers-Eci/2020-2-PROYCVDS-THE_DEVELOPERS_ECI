@@ -10,6 +10,9 @@ import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 import java.io.IOException;
 import java.io.Serializable;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
 import org.apache.shiro.authc.UsernamePasswordToken;
@@ -36,7 +39,23 @@ public class LoginBean implements Serializable{
     }
 
     public void setUserPassword(String userPassword) {
-        this.userPassword = userPassword;
+        this.userPassword = convertSHA256(userPassword);
+    }
+
+    private String convertSHA256(String password) {
+        MessageDigest md = null;
+        try {
+            md = MessageDigest.getInstance("SHA-256");
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+            return null;
+        }
+        byte[] hash = md.digest(password.getBytes());
+        StringBuffer sb = new StringBuffer();
+        for (byte b : hash) {
+            sb.append(String.format("%02x", b));
+        }
+        return sb.toString();
     }
 
     public boolean getRememberMe() {
@@ -56,20 +75,19 @@ public class LoginBean implements Serializable{
             FacesContext.getCurrentInstance().getExternalContext().redirect("/faces/inicio.xhtml");
 
         } catch (UnknownAccountException e) {
-
+            userPassword = "";
             FacesContext.getCurrentInstance().addMessage("shiro", new FacesMessage(FacesMessage.SEVERITY_ERROR,
                     "El correo electronico que has introducido no coincide con ninguna cuenta.", "Credenciales incorrectas."));
 
         } catch (IncorrectCredentialsException e) {
-
+            userPassword = "";
             FacesContext.getCurrentInstance().addMessage("shiro", new FacesMessage(FacesMessage.SEVERITY_ERROR,
                     "Clave de acceso incorrecta.", "Credenciales incorrectas."));
 
         } catch (IOException e) {
-
+            userPassword = "";
             FacesContext.getCurrentInstance().addMessage("shiro", new FacesMessage(FacesMessage.SEVERITY_ERROR,
                     "Ha ocurrido algo.", "F"));
-
         }
     }
 

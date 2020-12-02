@@ -74,4 +74,13 @@ public class MyBatisElementoDao implements ElementoDAO{
             throw new UnsupportedOperationException("Error al insertar el elemento: "+e.getLocalizedMessage(), e);
         }
     }
+
+    @Override
+    public void asociarElementoEquipo(int equipo, int numeroserial, boolean disponible) throws PersistenceException {
+        try{
+            elementoMapper.asociarElementoEquipo(equipo, numeroserial, disponible);
+        }catch(Exception e){
+            throw new UnsupportedOperationException("Error al asociar el elemento:"+e.getLocalizedMessage(), e);
+        }
+    }
 }

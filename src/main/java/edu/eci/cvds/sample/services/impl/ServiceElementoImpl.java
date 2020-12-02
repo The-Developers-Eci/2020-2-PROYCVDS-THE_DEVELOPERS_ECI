@@ -66,4 +66,13 @@ public class ServiceElementoImpl implements ServiceElemento {
             throw new UnsupportedOperationException("No se insertar el elemento ", e);
         }
     }
+
+    @Override
+    public void asociarElementoEquipo(int equipo, int numeroserial, boolean disponible) throws ExcepcionServiceHistorialEquipos {
+        try{
+            elementoDAO.asociarElementoEquipo(equipo, numeroserial, disponible);
+        }catch(Exception e){
+            throw new UnsupportedOperationException("Error al asociar el elemento:"+e.getLocalizedMessage(), e);
+        }
+    }
 }

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:jsf="http://xmlns.jcp.org/jsf" xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:shiro="http://shiro.apache.org/tags"
+      lang="es">
+
+<h:head>
+    <title>Asociar Elementos</title>
+    <link href="css/estilos.css" rel="stylesheet" />
+</h:head>
+
+<h:body>
+    <br/>
+    <h:form id="asocairElemento">
+        <a class="botonAtras" href="elemento.xhtml">
+            atrás
+        </a>
+        <center><h1>Asociar Elementos</h1></center>
+        <br/><br/>
+        <div class="hola">
+            <h2>Asociar Elemento a Equipo</h2>
+        </div>
+        <div>
+            <center>
+                <h:panelGrid columns="6" cellpadding="5">
+                    <p:outputLabel value="Elemento:" ></p:outputLabel>
+                    <h:selectOneMenu name="elemento" id="elementoCon"
+                                     value="#{Elemento.selectedElemento}" required="true" binding="#{elemento}"
+                                     type="number" class="form-control">
+                        <f:selectItems value="#{Elemento.getElementosMap()}" />
+                    </h:selectOneMenu>
+                    <p:outputLabel value="Equipo:" ></p:outputLabel>
+                    <h:selectOneMenu name="equipo" id="equipoCon"
+                                     value="#{equipoBean.selectedEquipo}" required="true" binding="#{equipo}"
+                                     type="number" class="form-control">
+                        <f:selectItems value="#{equipoBean.getEquiposMap()}" />
+                    </h:selectOneMenu>
+                </h:panelGrid>
+                <h:commandButton styleClass="botonAtras" update="asocairElemento" href="#" value="Asociar" actionListener="#{Elemento.asociarElementoEquipo(elemento.value, equipo.value)}"/>
+            </center>
+        </div>
+    </h:form>
+</h:body>
+</html>

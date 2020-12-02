@@ -18,6 +18,9 @@ import edu.eci.cvds.sample.services.ExcepcionServiceHistorialEquipos;
 import edu.eci.cvds.sample.entities.Elemento;
 import edu.eci.cvds.sample.factory.ServiceFactory;
 
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.List;
 
@@ -40,6 +43,9 @@ public class ElementoBean {
     public List<Elemento> teclados;
     public List<Elemento> pantallas;
     public Elemento elemento;//Elemento en Específico
+
+    private Map<String, String> elementosMap;
+    private String selectedElemento;
 
     //GET y SET
     public List<Elemento> getElementos() {
@@ -125,6 +131,24 @@ public class ElementoBean {
         return max;
     }
 
+    public void asociarElementoEquipo(String elemento, String equipo) throws ExcepcionServiceHistorialEquipos {
+        System.out.println(elemento);
+        System.out.println(equipo);
+        int idElemento = Integer.parseInt(elemento);
+        int idEquipo = Integer.parseInt(equipo);
+        int idElementoEliminar = 0;
+        Elemento elementoTemp = serviceElemento.consultarElemento(idElemento);
+        ArrayList<Elemento> elementosTemp = (ArrayList<Elemento>) serviceElemento.consultarElementosEquipo(idEquipo);
+        for(Elemento elemento1 : elementosTemp){
+            if (elementoTemp.getTipo().equalsIgnoreCase(elemento1.getTipo())){
+                idElementoEliminar = Integer.parseInt(elemento1.getNumeroSerial());
+            }
+        }
+        serviceElemento.asociarElementoEquipo(idEquipo, idElemento, false);
+        System.out.println(idElementoEliminar);
+        serviceElemento.asociarElementoEquipo(0, idElementoEliminar, true);
+    }
+
     //DEFAULT
     public ElementoBean(){
         serviceElemento = ServiceFactory.getInstance().getServiceElemento();
@@ -140,5 +164,28 @@ public class ElementoBean {
     public void showMessage(String confirmacion) {
         FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Mensaje", confirmacion);
         PrimeFaces.current().dialog().showMessageDynamic(message);
+    }
+
+    public Map<String, String> getElementosMap() throws ExcepcionServiceHistorialEquipos {
+        ArrayList<Elemento> elementosTmp = (ArrayList<Elemento>) consultarElementos();
+        elementosMap = new LinkedHashMap<String, String>();
+        for (Elemento elemento : elementosTmp){
+            if (elemento.getDisponible()){
+                elementosMap.put(elemento.getMarca() + "-" + elemento.getReferencia(), elemento.getNumeroSerial());
+            }
+        }
+        return elementosMap;
+    }
+
+    public void setElementosMap(Map<String, String> elementosMap) {
+        this.elementosMap = elementosMap;
+    }
+
+    public String getSelectedElemento() {
+        return selectedElemento;
+    }
+
+    public void setSelectedElemento(String selectedElemento) {
+        this.selectedElemento = selectedElemento;
     }
 }

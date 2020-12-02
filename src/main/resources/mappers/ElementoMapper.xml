@@ -16,6 +16,13 @@
 
     </resultMap>
 
+    <!-- Cambiar Elemento Equipo -->
+    <update id="asociarElementoEquipo" parameterType="map">
+        UPDATE elemento
+        SET equipoasociado = #{equipo}, disponible = #{disponible}
+        WHERE numeroserial = #{numeroserial}
+    </update>
+
     <select parameterType="map" id="consultarElemento" resultMap="ElementoResult">
 
         SELECT

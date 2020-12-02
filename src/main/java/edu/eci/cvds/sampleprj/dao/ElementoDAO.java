@@ -2,6 +2,7 @@ package edu.eci.cvds.sampleprj.dao;
 
 import edu.eci.cvds.sample.entities.Elemento;
 import edu.eci.cvds.sample.services.ExcepcionServiceHistorialEquipos;
+import org.apache.ibatis.annotations.Param;
 import org.mybatis.guice.transactional.Transactional;
 import java.util.List;
 
@@ -19,4 +20,6 @@ public interface ElementoDAO {
 
     @Transactional
     public void agregarElemento(String tipo, String marca, String referencia) throws PersistenceException;
+
+    void asociarElementoEquipo(int equipo, int numeroserial, boolean disponible) throws PersistenceException;
 }

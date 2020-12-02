@@ -3,6 +3,8 @@ package edu.eci.cvds.sample.services;
 import edu.eci.cvds.sample.entities.Elemento;
 
 import java.util.List;
+
+import edu.eci.cvds.sampleprj.dao.PersistenceException;
 import org.mybatis.guice.transactional.Transactional;
 
 public interface ServiceElemento {
@@ -18,4 +20,6 @@ public interface ServiceElemento {
 
     @Transactional
     void agregarElemento(String tipo, String marca, String referencia) throws ExcepcionServiceHistorialEquipos;
+
+    void asociarElementoEquipo(int equipo, int numeroserial, boolean disponible) throws ExcepcionServiceHistorialEquipos;
 }

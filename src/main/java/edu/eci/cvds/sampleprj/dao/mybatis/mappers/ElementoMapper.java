@@ -20,4 +20,6 @@ public interface ElementoMapper {
 
     @Transactional
     public void agregarElemento(@Param("tip")String tipo, @Param("marc")String marca, @Param("ref")String referencia);
+
+    void asociarElementoEquipo(@Param("equipo") int equipo, @Param("numeroserial") int numeroserial, @Param("disponible") boolean disponible);
 }
