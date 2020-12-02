@@ -2,11 +2,16 @@ package edu.eci.cvds.bean;
 
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ApplicationScoped;
-import javax.faces.bean.ViewScoped;
+import javax.faces.bean.RequestScoped;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
+import javax.faces.context.FacesContext;
 
+import com.google.inject.Inject;
 import edu.eci.cvds.sample.entities.Equipo;
 import edu.eci.cvds.sample.services.ServiceElemento;
+import edu.eci.cvds.sample.services.ServiceEquipo;
+import edu.eci.cvds.sample.services.ServiceNovedad;
 import org.primefaces.PrimeFaces;
 
 import edu.eci.cvds.sample.services.ExcepcionServiceHistorialEquipos;
@@ -17,12 +22,16 @@ import java.util.stream.Collectors;
 import java.util.List;
 
 @ManagedBean(name = "Elemento")
-@ViewScoped
+@RequestScoped
 //@ApplicationScoped
 
 public class ElementoBean {
 
-    private final ServiceElemento serviceElemento;
+    @Inject
+    private ServiceElemento serviceElemento;
+
+    @Inject
+    private ServiceNovedad serviceNovedad;
 
     public List<Elemento> elementos;//Todos los Elementos
     public List<Elemento> elementosEquipo;//Elementos que Pertenecen a un Equipo
@@ -43,6 +52,14 @@ public class ElementoBean {
 
     public void setElementos(List<Elemento> elementos) {
         this.elementos = elementos;
+    }
+
+    public List<String> getMarcas() {
+        List<String> marcas = null;
+        for (Elemento e:elementos){
+            marcas.add(e.getMarca());
+        }
+        return marcas;
     }
 
     //OPERATIONS
@@ -82,12 +99,36 @@ public class ElementoBean {
     }
 
     public void agregarElemento(String tipo, String marca, String referencia) throws ExcepcionServiceHistorialEquipos {
-        serviceElemento.agregarElemento(tipo,marca,referencia);
+        if(tipo=="" || marca=="" || referencia==""){
+            FacesContext.getCurrentInstance().addMessage(null,
+                    new FacesMessage(FacesMessage.SEVERITY_WARN, null, "Todos los campos se deben diligenciar."));
+        }else{
+            serviceElemento.agregarElemento(tipo,marca,referencia);
+            FacesContext.getCurrentInstance().addMessage(null,
+                    new FacesMessage(FacesMessage.SEVERITY_INFO, null, "Elemento registrado satisfactoriamente."));
+            serviceNovedad.agregarNovedadRegistroElemento("Registro",
+                    "El elemento: "+marca+" "+referencia+", ha sido registrado.","admin",maxNumSerial());
+        }
+    }
+
+    public int maxNumSerial() throws ExcepcionServiceHistorialEquipos {
+        List<Elemento> refrescar= consultarElementos();
+        List<String> numSeriales = null;
+        int temp = 0;
+        int max = 0;
+        for (Elemento i:elementos){
+            temp=Integer.parseInt(i.getNumeroSerial());
+            if(max<temp) {
+                max = temp;
+            }
+        }
+        return max;
     }
 
     //DEFAULT
     public ElementoBean(){
         serviceElemento = ServiceFactory.getInstance().getServiceElemento();
+        serviceNovedad = ServiceFactory.getInstance().getServiceNovedad();
         try{
             elementos = serviceElemento.consultarElementos();
         }catch(ExcepcionServiceHistorialEquipos e){

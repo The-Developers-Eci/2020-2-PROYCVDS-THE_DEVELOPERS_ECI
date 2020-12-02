@@ -9,13 +9,14 @@ import edu.eci.cvds.sample.services.ServiceHistorialEquipos;
 import org.primefaces.PrimeFaces;
 
 import javax.faces.application.FacesMessage;
+import javax.faces.bean.RequestScoped;
 import javax.faces.bean.SessionScoped;
 import javax.faces.bean.ManagedBean;
+import javax.faces.context.FacesContext;
 import java.util.List;
 
-@SuppressWarnings("deprecation")
 @ManagedBean(name = "equipoBean")
-@SessionScoped
+@RequestScoped
 public class EquipoBean extends BasePageBean{
 
     @Inject
@@ -36,18 +37,25 @@ public class EquipoBean extends BasePageBean{
     }
 
     public void registrarEquipo(String mouse, String teclado, String pantalla, String torre) throws ExcepcionServiceHistorialEquipos{
-        serviceEquipo.agregarEquipo(nombreEquipo);
+        if(mouse=="" || teclado=="" || pantalla=="" || torre=="" || nombreEquipo==""){
+            FacesContext.getCurrentInstance().addMessage(null,
+                    new FacesMessage(FacesMessage.SEVERITY_WARN, null, "Todos los campos se deben diligenciar."));
+        }else{
+            serviceEquipo.agregarEquipo(nombreEquipo);
+            asociarElementosEquipo(mouse, teclado, pantalla, torre);
+            FacesContext.getCurrentInstance().addMessage(null,
+                    new FacesMessage(FacesMessage.SEVERITY_INFO, null, "Equipo registrado satisfactoriamente."));
+        }
+    }
+
+    public void asociarElementosEquipo(String mouse, String teclado, String pantalla, String torre) throws ExcepcionServiceHistorialEquipos {
         int idEquipo =  Integer.parseInt(serviceEquipo.consultarEquipo(nombreEquipo).getIdEquipo());
-        //ASOCIAR MOUSE
         String[] datosMouse = mouse.split("-", 0);
         serviceElemento.asociarElemento(idEquipo, datosMouse[0], datosMouse[1]);
-        //ASOCIAR TECLADO
         String[] datosTeclado = teclado.split("-", 0);
         serviceElemento.asociarElemento(idEquipo, datosTeclado[0], datosTeclado[1]);
-        //ASOCIAR PANTALLA
         String[] datosPantalla = pantalla.split("-", 0);
         serviceElemento.asociarElemento(idEquipo, datosPantalla[0], datosPantalla[1]);
-        //ASOCIAR TORRE
         String[] datosTorre = torre.split("-", 0);
         serviceElemento.asociarElemento(idEquipo, datosTorre[0], datosTorre[1]);
     }
@@ -55,6 +63,7 @@ public class EquipoBean extends BasePageBean{
     public String getNombreEquipo() { return this.nombreEquipo; }
 
     public void setNombreEquipo(String nombreEquipo){ this.nombreEquipo=nombreEquipo; }
+
     public void start(){}
 
     public void showMessage(String confirmacion) {
@@ -70,4 +79,3 @@ public class EquipoBean extends BasePageBean{
         this.equipos = equipos;
     }
 }
-

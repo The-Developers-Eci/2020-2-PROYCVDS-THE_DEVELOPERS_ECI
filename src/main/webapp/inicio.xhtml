@@ -5,23 +5,30 @@
       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
       xmlns:shiro="http://shiro.apache.org/tags"
       lang="es">
-
 <h:head>
     <title>Menú</title>
     <style>
-        div{
+        .botonSalir{
+            font-weight: 500;
+            font-size: 20px;
+            color: #ffffff;
+            background-color: #E75131;
+            border-radius: 18px;
+            border: 1px solid #FF2D00;
+        }
+
+        .fondoInicio{
             background: rgb(180, 180, 180);
             margin: 20px 600px 20px 600px;
         }
     </style>
     <link href="css/estilos.css" rel="stylesheet" />
 </h:head>
-
 <h:body>
+    <p:commandButton class="botonSalir" align="rigth" value="salir" actionListener="#{loginBean.logOut()}"></p:commandButton>
     <center>
         <h1>Historial de Equipos</h1>
-        <br/>
-        <div>
+        <div class="fondoInicio">
             <img src="assets/img/elementos.png" height="175" width="300"/>
             <h:form>
                 <a class="botonInicio" href="elemento.xhtml">
@@ -30,7 +37,7 @@
             </h:form>
         </div>
 
-        <div>
+        <div class="fondoInicio">
             <img src="assets/img/equipos.png" height="200" width="200"/>
             <h:form>
                 <a class="botonInicio" href="equipo.xhtml">
@@ -39,10 +46,10 @@
             </h:form>
         </div>
 
-        <div>
+        <div class="fondoInicio">
             <img src="assets/img/novedades.png" height="200" width="350"/>
             <h:form>
-                <a class="botonInicio" href="elemento.xhtml">
+                <a class="botonInicio" href="novedad.xhtml">
                     Novedades
                 </a>
             </h:form>

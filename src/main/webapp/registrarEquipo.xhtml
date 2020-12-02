@@ -20,17 +20,10 @@
         <center>
             <h1>Registrar un Equipo</h1>
             <h:form id="formulario">
-                <!---
-                    <div>
-                    <h2>Nombre del Equipo</h2>
-                    <p:inputText class="texto" type="String" binding="#{equipo}"></p:inputText>
-                </div>
-                -->
                 <div>
                     <h2>Nombre del Equipo</h2>
                     <span class="ui-float-label">
                        <p:inputText id="float-input" value="#{equipoBean.nombreEquipo}" />
-                       <p:outputLabel for="@previous" value="Nombre del equipo" />
                    </span>
                 </div>
                 <br/><br/>
@@ -68,11 +61,15 @@
                         </p:selectOneMenu><br/><br/><br/>
                     </div>
                 </div>
-                <p:commandButton class="botonAccion" update="registroEquipo"
-                                 actionListener="#{equipoBean.registrarEquipo(mouse.value,teclado.value,pantalla.value,torre.value)}"
-                                    value="Registrar"></p:commandButton>
             </h:form>
-            <br/><br/>
+            <p:commandButton id="registrar" class="botonAccion" update="formulario"
+                             actionListener="#{equipoBean.registrarEquipo(mouse.value,teclado.value,pantalla.value,torre.value)}"
+                             value="Registrar"></p:commandButton>
+            <p:separator />
+            <p:messages id="messages" showDetail="true" closable="true" style =" height: 50px ; width: 600px">
+                <p:autoUpdate />
+            </p:messages>
+            <!--
             <p:dataTable value="#{equipoBean.consultarEquipos()}" var="equipo" styleClass = "Table" rows="10" style="width:800px;" >
                 <p:column headerText="ID">
                     <p:outputLabel value="#{equipo.idEquipo}"/>
@@ -80,7 +77,7 @@
                 <p:column headerText="Nombre">
                     <p:outputLabel value="#{equipo.nombre}"/>
                 </p:column>
-                <!--
+
                 <p:column headerText="Disponible">
                     <p:outputLabel value="#{equipo.disponible}"/>
                 </p:column>
@@ -90,9 +87,9 @@
                 <p:column headerText="Activo">
                     <p:outputLabel value="#{equipo.activo}"/>
                 </p:column>
-                -->
             </p:dataTable>
             <label>#{equipo}</label>
+            -->
         </center>
     </h:form>
 </h:body>

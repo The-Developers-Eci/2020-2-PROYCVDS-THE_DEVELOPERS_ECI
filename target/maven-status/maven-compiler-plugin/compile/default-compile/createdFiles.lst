@@ -1,8 +1,10 @@
 edu\eci\cvds\sampleprj\dao\PersistenceException.class
+edu\eci\cvds\bean\MessagesView.class
 edu\eci\cvds\sampleprj\dao\ElementoDAO.class
 edu\eci\cvds\sampleprj\dao\mybatis\MyBatisEquipoDao.class
 edu\eci\cvds\bean\ElementoBean.class
 edu\eci\cvds\guice\GuiceContextListener$1.class
+edu\eci\cvds\sampleprj\dao\mybatis\MyBatisNovedadDao.class
 edu\eci\cvds\sampleprj\dao\EquipoDAO.class
 edu\eci\cvds\sampleprj\dao\mybatis\MyBatisElementoDao.class
 edu\eci\cvds\sample\entities\User.class
@@ -12,6 +14,10 @@ edu\eci\cvds\sample\services\ServiceEquipo.class
 edu\eci\cvds\sample\services\ServiceElemento.class
 edu\eci\cvds\bean\LoginBean.class
 edu\eci\cvds\sample\services\ExcepcionServiceHistorialEquipos.class
+edu\eci\cvds\bean\NovedadBean.class
+edu\eci\cvds\sample\entities\Novedad.class
+edu\eci\cvds\sample\services\impl\ServiceNovedadImpl.class
+edu\eci\cvds\sampleprj\dao\mybatis\mappers\NovedadMapper.class
 edu\eci\cvds\sampleprj\dao\mybatis\MyBatisUsuarioDao.class
 edu\eci\cvds\guice\GuiceContextListener.class
 edu\eci\cvds\sample\entities\Elemento.class
@@ -24,6 +30,8 @@ edu\eci\cvds\bean\EquipoBean.class
 edu\eci\cvds\sample\entities\Equipo.class
 edu\eci\cvds\sample\services\ServiceHistorialEquipos.class
 edu\eci\cvds\sampleprj\dao\mybatis\mappers\UsuarioMapper.class
+edu\eci\cvds\sampleprj\dao\NovedadDAO.class
 edu\eci\cvds\sample\services\impl\ServiceHistorialEquiposImpl.class
 edu\eci\cvds\sampleprj\dao\UsersDAO.class
 edu\eci\cvds\bean\BasePageBean.class
+edu\eci\cvds\sample\services\ServiceNovedad.class

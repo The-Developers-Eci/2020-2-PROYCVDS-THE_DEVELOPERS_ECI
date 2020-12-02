@@ -49,7 +49,6 @@ public class LoginBean implements Serializable{
 
     public void loginUser() {
         try {
-
             currentUser = SecurityUtils.getSubject();
             UsernamePasswordToken token = new UsernamePasswordToken(userName,userPassword,true);
             currentUser.login(token);
@@ -78,7 +77,7 @@ public class LoginBean implements Serializable{
     {
         SecurityUtils.getSubject().logout();
         try{
-            FacesContext.getCurrentInstance().getExternalContext().redirect("/faces/Index.xhtml");
+            FacesContext.getCurrentInstance().getExternalContext().redirect("/faces/index.xhtml");
         }catch (IOException ex) {
         }
     }
@@ -93,6 +92,7 @@ public class LoginBean implements Serializable{
         }
 
     }
+
     public static String getUser(){
         return (String) SecurityUtils.getSubject().getSession().getAttribute("Correo");
     }

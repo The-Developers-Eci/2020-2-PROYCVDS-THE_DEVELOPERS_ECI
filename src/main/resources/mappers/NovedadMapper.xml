@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="edu.eci.cvds.sampleprj.dao.mybatis.mappers.NovedadMapper">
+
+    <resultMap type='Novedad' id='NovedadesResult'>
+        <id property='idNovedad' column='idnovedad'/>
+        <result property='tipo' column='tipo'/>
+        <result property='fecha' column='fecha'/>
+        <result property='detalle' column='detalle'/>
+        <result property='autor' column='autor'/>
+        <result property='idElemento' column='idelemento'/>
+        <result property='idEquipo' column='idequipo'/>
+    </resultMap>
+
+    <select parameterType="map" id="consultarNovedades" resultMap="NovedadesResult">
+
+        SELECT
+            nv.idnovedad,
+            nv.tipo,
+            nv.fecha,
+            nv.detalle,
+            nv.autor,
+            nv.idelemento,
+            nv.idequipo
+        FROM public.novedad AS nv
+
+    </select>
+
+    <insert parameterType="map" id="agregarNovedadRegistroElemento">
+
+        INSERT INTO public.novedad
+            (tipo, detalle, autor, idelemento)
+                VALUES(#{tip}, #{det}, #{aut}, #{idel});
+
+    </insert>
+
+</mapper>

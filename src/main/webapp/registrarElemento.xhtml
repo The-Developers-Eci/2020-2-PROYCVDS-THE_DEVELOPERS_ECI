@@ -12,36 +12,41 @@
 </h:head>
 
 <h:body>
+    <p:tooltip />
     <br/>
     <h:form id="registroElemento">
         <a class="botonAtras" href="elemento.xhtml">
             atrás
         </a>
         <center>
-            <h1>Registrar un Elemento</h1>
-            <div class="row">
-                <div class="column">
-                    <h2>Tipo</h2>
-                    <p:selectOneMenu id="Tipo" name="Tipo" binding="#{tipo}" style="width:187px">
-                        <f:selectItem itemLabel="-"/>
-                        <f:selectItem itemLabel="Torre" itemValue="torre"/>
-                        <f:selectItem itemLabel="Mouse" itemValue="mouse"/>
-                        <f:selectItem itemLabel="Teclado" itemValue="teclado"/>
-                        <f:selectItem itemLabel="Pantalla" itemValue="pantalla"/>
-                    </p:selectOneMenu>
+            <h1>Registro de Elementos</h1>
+            <h:form id="tabla">
+                <div class="row">
+                    <div class="column">
+                        <h2>Tipo</h2>
+                        <p:selectOneMenu id="Tipo" name="Tipo" binding="#{tipo}" style="width:187px">
+                            <f:selectItem itemLabel="-"/>
+                            <f:selectItem itemLabel="Torre" itemValue="torre"/>
+                            <f:selectItem itemLabel="Mouse" itemValue="mouse"/>
+                            <f:selectItem itemLabel="Teclado" itemValue="teclado"/>
+                            <f:selectItem itemLabel="Pantalla" itemValue="pantalla"/>
+                        </p:selectOneMenu>
+                    </div>
+                    <div class="column">
+                        <h2>Marca</h2>
+                        <p:inputText name="Marca" binding="#{marca}"></p:inputText>
+                    </div>
+                    <div class="column">
+                        <h2>Referencia</h2>
+                        <p:inputText name="Referencia" binding="#{ref}"></p:inputText>
+                    </div>
                 </div>
-                <div class="column">
-                    <h2>Marca</h2>
-                    <p:inputText name="Marca" binding="#{marca}"></p:inputText>
-                </div>
-                <div class="column">
-                    <h2>Referencia</h2>
-                    <p:inputText name="Referencia" binding="#{ref}"></p:inputText>
-                </div>
-            </div>
+            </h:form>
             <br/><br/><br/><br/><br/><br/><br/>
-            <p:commandButton class="botonAccion" update="tabla" actionListener="#{Elemento.agregarElemento(tipo.value,marca.value,ref.value)}" value="Registrar"></p:commandButton>
-            <br/><br/><br/>
+            <p:commandButton class="botonAccion" update="tabla" type="submit" value="Registrar"
+                             actionListener="#{Elemento.agregarElemento(tipo.value,marca.value,ref.value)}"></p:commandButton>
+            <p:separator />
+            <!--
             <p:dataTable id="tabla" value="#{Elemento.elementos}" var="elm" rows="100" style="width:1300px;" scrollable="true" scrollHeight="400" sortBy="#{elm.tipo}"
                          expandableRowGroups="true">
                 <f:facet name="header">
@@ -55,11 +60,6 @@
                 <p:column headerText="Numero Serial">
                     <center><p:outputLabel value="#{elm.numeroSerial}"/></center>
                 </p:column>
-                <!--
-                <p:column headerText="Tipo">
-                    <center><p:outputLabel value="#{elm.tipo}"/></center>
-                </p:column>
-                -->
                 <p:column headerText="Marca">
                     <center><p:outputLabel value="#{elm.marca}"/></center>
                 </p:column>
@@ -73,7 +73,10 @@
                     <center><p:outputLabel value="#{elm.equipoAsociado}"/></center>
                 </p:column>
             </p:dataTable>
-            <br/>
+            -->
+            <p:messages id="messages" showDetail="true" closable="true" style =" height: 50px ; width: 600px">
+                <p:autoUpdate />
+            </p:messages>
         </center>
     </h:form>
 </h:body>

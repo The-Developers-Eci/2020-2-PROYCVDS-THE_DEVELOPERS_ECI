@@ -6,11 +6,15 @@ import com.google.inject.Injector;
 import edu.eci.cvds.sample.services.ServiceElemento;
 import edu.eci.cvds.sample.services.ServiceEquipo;
 import edu.eci.cvds.sample.services.ServiceHistorialEquipos;
+import edu.eci.cvds.sample.services.ServiceNovedad;
 import edu.eci.cvds.sample.services.impl.ServiceElementoImpl;
 import edu.eci.cvds.sample.services.impl.ServiceEquipolmpl;
 import edu.eci.cvds.sample.services.impl.ServiceHistorialEquiposImpl;
 
+import edu.eci.cvds.sample.services.impl.ServiceNovedadImpl;
+import edu.eci.cvds.sampleprj.dao.NovedadDAO;
 import edu.eci.cvds.sampleprj.dao.UsersDAO;
+import edu.eci.cvds.sampleprj.dao.mybatis.MyBatisNovedadDao;
 import edu.eci.cvds.sampleprj.dao.mybatis.MyBatisUsuarioDao;
 
 import edu.eci.cvds.sampleprj.dao.EquipoDAO;
@@ -38,10 +42,12 @@ public class ServiceFactory {
                 bind(ServiceHistorialEquipos.class).to(ServiceHistorialEquiposImpl.class);
                 bind(ServiceEquipo.class).to(ServiceEquipolmpl.class);
                 bind(ServiceElemento.class).to(ServiceElementoImpl.class);
+                bind(ServiceNovedad.class).to(ServiceNovedadImpl.class);
                 /**DAO*/
                 bind(UsersDAO.class).to(MyBatisUsuarioDao.class);
                 bind(EquipoDAO.class).to(MyBatisEquipoDao.class);
                 bind(ElementoDAO.class).to(MyBatisElementoDao.class);
+                bind(NovedadDAO.class).to(MyBatisNovedadDao.class);
             }
         });
     }
@@ -56,6 +62,10 @@ public class ServiceFactory {
 
     public ServiceElemento getServiceElemento(){
         return  injector.getInstance(ServiceElemento.class);
+    }
+
+    public ServiceNovedad getServiceNovedad(){
+        return  injector.getInstance(ServiceNovedad.class);
     }
 
     public static ServiceFactory getInstance(){

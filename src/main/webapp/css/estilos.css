@@ -3,6 +3,7 @@ body{
     color: black;
     font: bold 125% monospace;
 }
+
 .botonInicio{
     text-decoration: none;
     padding: 10px;
@@ -49,6 +50,7 @@ body{
     width: 33.33%;
 }
 
+
 .column2 {
     float: left;
     width: 25%;
@@ -67,4 +69,8 @@ body{
 
 .hola{
     margin: 20px 150px 20px 300px;
+}
+
+.ui-toggleswitch {
+        vertical-align: bottom;
 }

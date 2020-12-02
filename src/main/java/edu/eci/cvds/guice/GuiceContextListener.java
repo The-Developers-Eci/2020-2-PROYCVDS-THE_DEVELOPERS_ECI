@@ -6,8 +6,12 @@ import javax.servlet.ServletContextListener;
 
 import edu.eci.cvds.sample.services.ServiceElemento;
 import edu.eci.cvds.sample.services.ServiceEquipo;
+import edu.eci.cvds.sample.services.ServiceNovedad;
 import edu.eci.cvds.sample.services.impl.ServiceElementoImpl;
 import edu.eci.cvds.sample.services.impl.ServiceEquipolmpl;
+import edu.eci.cvds.sample.services.impl.ServiceNovedadImpl;
+import edu.eci.cvds.sampleprj.dao.NovedadDAO;
+import edu.eci.cvds.sampleprj.dao.mybatis.MyBatisNovedadDao;
 import org.mybatis.guice.XMLMyBatisModule;
 import org.mybatis.guice.datasource.helper.JdbcHelper;
 
@@ -44,12 +48,15 @@ public class GuiceContextListener implements ServletContextListener {
 				bind(ServiceHistorialEquipos.class).to(ServiceHistorialEquiposImpl.class);
 				bind(ServiceEquipo.class).to(ServiceEquipolmpl.class);
 				bind(ServiceElemento.class).to(ServiceElementoImpl.class);
+				bind(ServiceNovedad.class).to(ServiceNovedadImpl.class);
 				/**Usuario*/
 				bind(UsersDAO.class).to(MyBatisUsuarioDao.class);
 				/**Elemento*/
 				bind(EquipoDAO.class).to(MyBatisEquipoDao.class);
 				/**Equipo*/
 				bind(ElementoDAO.class).to(MyBatisElementoDao.class);
+				/**Novedad*/
+				bind(NovedadDAO.class).to(MyBatisNovedadDao.class);
 			}
 		});
 		ServletContext servletContext = servletContextEvent.getServletContext();
