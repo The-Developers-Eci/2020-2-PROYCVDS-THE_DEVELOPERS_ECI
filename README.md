@@ -2,6 +2,8 @@
 
 # ***THE-DEVELOPERS Labinfo***
 
+
+##Datos generales##
 -Periodo Acedemico: 2020-2
 
 
