@@ -1,7 +1,7 @@
 # PROYCVDS-THE_DEVELOPERS_ECI-2020-2
 
 ## Historial de equipos Labinfo
-### Periodo Acedemico: 2020-2
+### *Periodo Acedemico*: 2020-2
 ### CICLOS DE VIDA Y DESARROLLO DE SOFTWARE
 ### Integrantes:
 - Paula Guevara
