@@ -30,4 +30,18 @@ public class MyBatisNovedadDao implements NovedadDAO {
             throw new UnsupportedOperationException("Error al agregar la novedad:"+e.getLocalizedMessage(), e);
         }
     }
+
+    @Override
+    public void registrarNovedad(Novedad novedad) {
+        try{
+            novedadMapper.registrarNovedad(novedad);
+
+        }catch (Exception e){
+            throw new UnsupportedOperationException("Error al agregar la novedad:"+e.getLocalizedMessage(), e);
+
+
+        }
+    }
+
+
 }

@@ -14,4 +14,5 @@ public interface NovedadMapper {
         public void agregarNovedadRegistroElemento(@Param("tip")String tipo, @Param("det")String detalle, @Param("aut")String autor,
                                    @Param("idel")int idElemento);
 
+        void registrarNovedad(@Param("novedad")Novedad novedad);
 }

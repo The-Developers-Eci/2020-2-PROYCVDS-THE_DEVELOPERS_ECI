@@ -31,4 +31,15 @@ public class ServiceNovedadImpl implements ServiceNovedad {
             throw new UnsupportedOperationException("No se pudo agregar la novedad: ", ex);
         }
     }
+
+    @Override
+    public void registrarNovedad(Novedad novedad) {
+        try{
+            novedadDAO.registrarNovedad(novedad);
+        }catch (Exception ex){
+            throw new UnsupportedOperationException("No se pudo registrar la novedad:", ex);
+        }
+
+    }
+
 }

@@ -19,11 +19,14 @@
         </a>
         <center><h1>Consulta de Novedades</h1></center>
         <br/><br/>
-        <p:commandButton class="botonAccion" update="consultaNovedades" value="Registrar"
-                         actionListener="#{Novedad.agregarNovedadRegistroElemento()}"></p:commandButton>
+        <a class="botonAccion" href="registrarNovedad.xhtml"> registrar</a>
         <p:separator />
         <center>
-            <p:dataTable id="tabla" value="#{Novedad.novedades}" var="nov" rows="100" style="width:1300px;">
+            <p:dataTable id="tabla" value="#{Novedad.novedades}" var="nov" rows="10" style="width:1300px;"
+                         paginator="true" paginatorTemplate="{CurrentPageReport} {FirstPageLink}
+                                        {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                         currentPageReportTemplate="{startRecord}-{endRecord} of {totalRecords} records"
+                         rowsPerPageTemplate="5,10,15,20">
                 <f:facet name="header">NOVEDADES</f:facet>
                 <p:column headerText="ID Novedad">
                     <center><p:outputLabel value="#{nov.idNovedad}"/></center>
@@ -36,6 +39,12 @@
                 </p:column>
                 <p:column headerText="Detalle">
                     <center><p:outputLabel value="#{nov.detalle}"/></center>
+                </p:column>
+                <p:column headerText="Elemento">
+                    <center><p:outputLabel value="#{nov.idElemento}"/></center>
+                </p:column>
+                <p:column headerText="Equipo">
+                    <center><p:outputLabel value="#{nov.idEquipo}"/></center>
                 </p:column>
             </p:dataTable>
         </center>

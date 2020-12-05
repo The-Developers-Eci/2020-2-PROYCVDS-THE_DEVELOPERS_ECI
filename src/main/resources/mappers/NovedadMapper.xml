@@ -37,4 +37,11 @@
 
     </insert>
 
+    <insert parameterType="map" id="registrarNovedad">
+        INSERT INTO public.novedad
+        (tipo, fecha, detalle, autor, idelemento, idequipo)
+        VALUES(#{novedad.tipo}, localtimestamp ,#{novedad.detalle},#{novedad.autor},#{novedad.idElemento},#{novedad.idEquipo});
+
+    </insert>
+
 </mapper>

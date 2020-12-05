@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:jsf="http://xmlns.jcp.org/jsf" xmlns:p="http://primefaces.org/ui"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:shiro="http://shiro.apache.org/tags"
+      lang="es">
+<h:head>
+    <title>Registro de Equipos</title>
+    <link href="css/estilos.css" rel="stylesheet" />
+</h:head>
+
+<h:body>
+    <br/>
+        <a class="botonAtras" href="novedad.xhtml">
+            atrás
+        </a>
+        <center>
+            <h1>Registrar un Novedad</h1>
+            <h:form id="formulario">
+                <h2> Novedad Equipo</h2>
+                <h:panelGrid columns="4" cellpadding="20">
+                    <p:outputLabel value="Tipo" for="tipo"/>
+                    <h:selectOneMenu name="Tipo" id="tipo" type="text" value="#{Novedad.tipoNovedad}" required="true" binding="#{tipo}">
+                        <f:selectItem itemLabel="Registro" itemValue="Registro" />
+                        <f:selectItem itemLabel="Error" itemValue="Error" />
+                        <f:selectItem itemLabel="Solicitud" itemValue="Solicitud" />
+                        <f:selectItem itemLabel="Fallos" itemValue="Fallos" />
+                    </h:selectOneMenu>
+
+
+                    <p:outputLabel value="Equipo:"></p:outputLabel>
+                    <h:selectOneMenu name="equipo" type="text" value="#{equipoBean.selectedEquipo}" required="true" binding="#{equipoId}">
+                        <f:selectItems value="#{equipoBean.getEquiposMap()}" />
+                    </h:selectOneMenu>
+
+                    <p:outputLabel value="detalle" for="detalle">
+                    </p:outputLabel>
+                    <p:inputText name="detalle" id="detalle" type="text" required="true" binding="#{detalle}">
+                    </p:inputText>
+
+                    <p:outputLabel value="autor" for="autor">
+                    </p:outputLabel>
+                    <p:inputText name="autor" id="autor" type="text" required="true" binding="#{autor}">
+                    </p:inputText>
+
+                </h:panelGrid>
+
+                <p:commandButton id="registrar" class="botonAccion" update="formulario"
+                                 actionListener="#{Novedad.registrarNovedadEquipo(tipo.value,detalle.value,autor.value, equipoId.value)}"
+                                 value="Registrar"></p:commandButton>
+
+            </h:form>
+
+            <p:separator />
+
+            <div>
+            <h:form id="formulario2">
+                <h2> Novedad Elemento</h2>
+                <h:panelGrid columns="4" cellpadding="20">
+                    <p:outputLabel value="Tipo" />
+                    <h:selectOneMenu name="Tipo" type="text" value="#{Novedad.tipoNovedad}" required="true" binding="#{tipo2}">
+                        <f:selectItem itemLabel="Registro" itemValue="Registro" />
+                        <f:selectItem itemLabel="Error" itemValue="Error" />
+                        <f:selectItem itemLabel="Solicitud" itemValue="Solicitud" />
+                        <f:selectItem itemLabel="Fallos" itemValue="Fallos" />
+                    </h:selectOneMenu>
+
+
+                    <p:outputLabel value="Elemento:"></p:outputLabel>
+                    <h:selectOneMenu name="Elemento" type="text" value="#{Elemento.selectedElemento}" required="true" binding="#{elementoId}">
+                        <f:selectItems value="#{Elemento.getElementosMap()}" />
+                    </h:selectOneMenu>
+
+                    <p:outputLabel value="detalle" for="detalle2">
+                    </p:outputLabel>
+                    <p:inputText name="detalle" id="detalle2" type="text" required="true" binding="#{detalle2}">
+                    </p:inputText>
+
+                    <p:outputLabel value="autor" for="autor2">
+                    </p:outputLabel>
+                    <p:inputText name="autor" id="autor2" type="text" required="true" binding="#{autor2}">
+                    </p:inputText>
+
+                </h:panelGrid>
+
+                <p:commandButton id="regi" class="botonAccion" update="formulario2"
+                                 actionListener="#{Novedad.registrarNovedadElemento(tipo2.value,detalle2.value,autor2.value, elementoId.value)}"
+                                 value="Registrar"></p:commandButton>
+
+            </h:form>
+            </div>
+
+
+            <p:messages id="messages" showDetail="true" closable="true" style =" height: 50px ; width: 600px">
+                <p:autoUpdate />
+            </p:messages>
+        </center>
+</h:body>
+</html>

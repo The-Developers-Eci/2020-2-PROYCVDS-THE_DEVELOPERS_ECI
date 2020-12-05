@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:jsf="http://xmlns.jcp.org/jsf" xmlns:p="http://primefaces.org/ui"
       xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
@@ -7,54 +6,50 @@
       lang="es">
 <h:head>
     <title>Menú</title>
-    <style>
-        .botonSalir{
-            font-weight: 500;
-            font-size: 20px;
-            color: #ffffff;
-            background-color: #E75131;
-            border-radius: 18px;
-            border: 1px solid #FF2D00;
-        }
-
-        .fondoInicio{
-            background: rgb(180, 180, 180);
-            margin: 20px 600px 20px 600px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/inicio.css"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
     <link href="css/estilos.css" rel="stylesheet" />
 </h:head>
 <h:body>
-    <p:commandButton class="botonSalir" align="rigth" value="salir" actionListener="#{loginBean.logOut()}"></p:commandButton>
-    <center>
-        <h1>Historial de Equipos</h1>
-        <div class="fondoInicio">
-            <img src="assets/img/elementos.png" height="175" width="300"/>
-            <h:form>
-                <a class="botonInicio" href="elemento.xhtml">
-                    Elementos
-                </a>
-            </h:form>
+    <p:commandButton class="button_salir" value="Salir" actionListener="#{loginBean.logOut()}"></p:commandButton>
+    <div class="basic_grid">
+        <div class="title">
+            <h1>Historial de Equipos</h1>
         </div>
+        <div class="elements">
+            <div class="element_flex">
+                <div class="cont_ofIma">
+                    <img src="assets/img/elementos.png"/>
+                </div>
+                <h:form>
+                    <a href="elemento.xhtml">
+                        Elementos
+                    </a>
+                </h:form>
+            </div>
+            <div class="element_flex">
+                <div class="cont_ofIma">
+                    <img src="assets/img/equipos.png"/>
+                </div>
 
-        <div class="fondoInicio">
-            <img src="assets/img/equipos.png" height="200" width="200"/>
-            <h:form>
-                <a class="botonInicio" href="equipo.xhtml">
-                    Equipos
-                </a>
-            </h:form>
+                <h:form>
+                    <a  href="equipo.xhtml">
+                        Equipos
+                    </a>
+                </h:form>
+            </div>
+            <div class="element_flex">
+                <div class="cont_ofIma">
+                    <img src="assets/img/novedades.png"/>
+                </div>
+                <h:form>
+                    <a  href="novedad.xhtml">
+                        Novedades
+                    </a>
+                </h:form>
+            </div>
         </div>
+    </div>
 
-        <div class="fondoInicio">
-            <img src="assets/img/novedades.png" height="200" width="350"/>
-            <h:form>
-                <a class="botonInicio" href="novedad.xhtml">
-                    Novedades
-                </a>
-            </h:form>
-        </div>
-        <br/>
-    </center>
 </h:body>
 </html>

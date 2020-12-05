@@ -11,4 +11,7 @@ public interface NovedadDAO {
 
         @Transactional
         public void agregarNovedadRegistroElemento(String tipo, String detalle, String autor, int idElemento) throws PersistenceException;
+
+        @Transactional
+        void registrarNovedad(Novedad novedad);
 }

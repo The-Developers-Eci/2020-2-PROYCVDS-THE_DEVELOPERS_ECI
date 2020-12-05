@@ -36,6 +36,7 @@ public class EquipoBean extends BasePageBean{
     private Map<String, String> equiposMap;
     private String selectedEquipo;
 
+
     //OPERATIONS
     public List<Equipo> consultarEquipos() throws ExcepcionServiceHistorialEquipos{
         equipos = serviceEquipo.consultarEquipos();

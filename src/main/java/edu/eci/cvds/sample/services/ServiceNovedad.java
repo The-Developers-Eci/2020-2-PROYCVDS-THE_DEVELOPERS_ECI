@@ -11,4 +11,6 @@ public interface ServiceNovedad {
 
     @Transactional
     void agregarNovedadRegistroElemento(String tipo, String detalle, String autor, int idElemento) throws ExcepcionServiceHistorialEquipos;
+    @Transactional
+    void registrarNovedad(Novedad novedad);
 }

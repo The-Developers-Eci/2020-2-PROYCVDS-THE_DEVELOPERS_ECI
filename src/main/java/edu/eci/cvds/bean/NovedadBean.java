@@ -25,6 +25,8 @@ public class NovedadBean{
 
     public List<Novedad> novedades;
 
+    private String tipoNovedad;
+
     //OPERATIONS
     public List<Novedad> consultarNovedades() throws ExcepcionServiceHistorialEquipos {
         novedades = serviceNovedad.consultarNovedades();
@@ -45,6 +47,18 @@ public class NovedadBean{
                 "admin@eci.com",94);
     }
 
+    public void registrarNovedadEquipo(String tipo, String detalle, String autor, String idequipo) throws ExcepcionServiceHistorialEquipos{
+        int idEqui = Integer.parseInt(idequipo);
+        Novedad novedad= new Novedad(0,tipo,null,detalle,autor,0,idEqui);
+        serviceNovedad.registrarNovedad(novedad);
+    }
+
+    public void registrarNovedadElemento(String tipo, String detalle, String autor, String idElemento) throws ExcepcionServiceHistorialEquipos{
+        int idElem = Integer.parseInt(idElemento);
+        Novedad novedad= new Novedad(0,tipo,null,detalle,autor,idElem,0);
+        serviceNovedad.registrarNovedad(novedad);
+    }
+
     //DEFAULT
     public NovedadBean(){
         serviceNovedad = ServiceFactory.getInstance().getServiceNovedad();
@@ -59,5 +73,13 @@ public class NovedadBean{
     public void showMessage(String confirmacion) {
         FacesMessage message = new FacesMessage(FacesMessage.SEVERITY_INFO, "Mensaje", confirmacion);
         PrimeFaces.current().dialog().showMessageDynamic(message);
+    }
+
+    public String getTipoNovedad() {
+        return tipoNovedad;
+    }
+
+    public void setTipoNovedad(String tipoNovedad) {
+        this.tipoNovedad = tipoNovedad;
     }
 }
