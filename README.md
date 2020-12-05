@@ -163,13 +163,15 @@ EL Sprint 1 comenzó a medias, debido que la definición de las tareas descritas
 
 ### **SPRINT 2**
 
-Para este Sprint se usuaron las siguientes historias de usuario propuestas, con el fin de comenzar la estructuracion del proyecto:
+Para este Sprint 2 se usuaron las siguientes historias de usuario propuestas, con el fin de reorganizar el proyecto y avanzarlo lo mas que se pudiera:
 
 - Corrección del Sprint 1
 - Reporte historico de novedades
 - Reporte de equipos.
 - Reporte de laboratorios.
 - Reporte de elementos
+
+Se presento grandes problemas en el Sprint 1, pues tuvimos un problema de integración del sistema, específicamente en el BEAN, lo que causo muchos retrasos tanto en el Sprint 1, como en el sprint 2. Es por eso que se decidió hacer borrón y cuenta nueva, y volver a implementar desde cero, esto con el fin de que se estructurara mejor el proyecto y se mitigaran los errores. Esto sirvió y permitió solución de errores y un avance circunstancial en el proyecto.
 
 
 
@@ -184,7 +186,7 @@ Para este Sprint se usuaron las siguientes historias de usuario propuestas, con 
 
 ### **SPRINT 3**
 
-Para este Sprint se usuaron las siguientes historias de usuario propuestas, con el fin de comenzar la estructuracion del proyecto:
+Para este Sprint 3 se usuaron las siguientes historias de usuario propuestas, con el fin de comenzar a culminar el proyecto lo mas pronto posible y avanzar en lo que se podia.:
 
 - Corrección del Sprint 2
 - Crear Laboratorio.
@@ -192,6 +194,8 @@ Para este Sprint se usuaron las siguientes historias de usuario propuestas, con 
 - Dar de baja elemento.
 - Asociar Equipo.
 
+
+Para este Sprint 3 se comenzaron a ver los rezagos de los sprint anteriores, pues habían rastros de cosas faltantes de los otros Sprint, al presentarse estos rezagos de los sprint anteriores, esto causo retrasos considerables, pues tenía que culminarse las tareas de los sprint 1 y 2 para poder continuar con las tareas del sprint 3. Esto causo que no se completara el Sprint 3 y que generara que no se avanzara gran parte en este, si no en muy pocas tareas. Se logro completar tareas del Sprint 3, muy pocas.
 
 
 #### ***Burdown Chart***
