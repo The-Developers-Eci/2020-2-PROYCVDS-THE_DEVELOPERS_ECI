@@ -33,7 +33,8 @@ Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS
   
   - Al dar clic en el botón, nos redirigirá al menú de acceso, en donde nos solicitara en los espacios en blanco un Correo y una contraseña,     al ingresar dichos datos procedemos a darle INGRESAR.
   
-  ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/inicio%20sesion%202.pngg)
+  ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/inicio%20sesion%202.png)
+  
   - Existen un tipo de usuario llamado: Amdinistrador
   - Este usuario cuenta con todos los privilegios para acceder a la página y así mismo realizar cambios.
   
