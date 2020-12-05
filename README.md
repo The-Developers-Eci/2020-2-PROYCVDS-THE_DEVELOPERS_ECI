@@ -126,7 +126,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS
 - Paula Guevara Sanchez.
 - Fabián Ramírez Pinto.
 
-### **Taiga**
+# **Taiga**
 
 Mediante este enlace se podra acceder a la Herramienta Taiga y conocer el proceso del Proyecto [Taiga THE-DEVELOPERS-Labinfo](https://tree.taiga.io/project/federico29-historial-de-equipos-labinfo/timeline/).
 
