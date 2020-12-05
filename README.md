@@ -182,3 +182,22 @@ Para este Sprint se usuaron las siguientes historias de usuario propuestas, con 
 ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/sprint%202%20backlog.jpg)
 
 
+### **SPRINT 3**
+
+Para este Sprint se usuaron las siguientes historias de usuario propuestas, con el fin de comenzar la estructuracion del proyecto:
+
+- Corrección del Sprint 2
+- Crear Laboratorio.
+- Asociar Elemento.
+- Dar de baja elemento.
+- Asociar Equipo.
+
+
+
+#### ***Burdown Chart***
+
+![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/sprint%203%20burdwn%20char.jpg)
+
+#### ***Backlog***
+
+![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Sprint%203%20backlog.jpg)
