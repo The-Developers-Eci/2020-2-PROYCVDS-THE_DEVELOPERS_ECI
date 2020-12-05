@@ -21,36 +21,66 @@
             <div class="title">
                 <h1>Consulta de Novedades</h1>
             </div>
+            <br/><br/>
+            <p:button class="botonMenu" value="Nueva Novedad" outcome="registrarNovedad.xhtml"/>
         </center>
         <br/><br/>
-        <a class="botonAccion" href="registrarNovedad.xhtml"> registrar</a>
         <p:separator />
+        <br/><br/>
         <center>
-            <p:dataTable id="tabla" value="#{Novedad.novedades}" var="nov" rows="10" style="width:1300px;"
-                         paginator="true" paginatorTemplate="{CurrentPageReport} {FirstPageLink}
-                                        {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
-                         currentPageReportTemplate="{startRecord}-{endRecord} of {totalRecords} records"
-                         rowsPerPageTemplate="5,10,15,20">
-                <f:facet name="header">NOVEDADES</f:facet>
-                <p:column headerText="ID Novedad">
-                    <center><p:outputLabel value="#{nov.idNovedad}"/></center>
+            <p:dataTable id="tbl" var="nov" value="#{Novedad.novedades}"
+                         paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {Exporters}"
+                         paginator="true" rows="10" style="margin-bottom:20px">
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="ID Novedad" />
+                    </f:facet>
+                    <h:outputText value="#{nov.idNovedad}" />
                 </p:column>
-                <p:column headerText="Tipo">
-                    <center><p:outputLabel value="#{nov.tipo}"/></center>
+
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Tipo"/>
+                    </f:facet>
+                    <h:outputText value="#{nov.tipo}" />
                 </p:column>
-                <p:column headerText="Fecha">
-                    <center><p:outputLabel value="#{nov.fecha}"/></center>
+
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Fecha" />
+                    </f:facet>
+                    <h:outputText value="#{nov.fecha}" />
                 </p:column>
-                <p:column headerText="Detalle">
-                    <center><p:outputLabel value="#{nov.detalle}"/></center>
+
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Detalle" />
+                    </f:facet>
+                    <h:outputText value="#{nov.detalle}" />
                 </p:column>
-                <p:column headerText="Elemento">
-                    <center><p:outputLabel value="#{nov.idElemento}"/></center>
+
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Elemento" />
+                    </f:facet>
+                    <h:outputText value="#{nov.idElemento}" />
                 </p:column>
-                <p:column headerText="Equipo">
-                    <center><p:outputLabel value="#{nov.idEquipo}"/></center>
+
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Equipo" />
+                    </f:facet>
+                    <h:outputText value="#{nov.idEquipo}" />
                 </p:column>
             </p:dataTable>
+            <h:panelGrid columns="4" cellpadding="20">
+                <div class="cont_ofIma">
+                    <img src="assets/img/excel.png"/>
+                    <p:commandButton value="Exportar Excel" class="botonAccion" ajax="false">
+                        <p:dataExporter type="xls" target="tbl" fileName="Reporte_de_Novedades"/>
+                    </p:commandButton>
+                </div>
+            </h:panelGrid>
         </center>
     </h:form>
 </h:body>

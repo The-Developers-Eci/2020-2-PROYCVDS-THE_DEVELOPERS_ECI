@@ -8,39 +8,72 @@
 
 <h:head>
     <title>Consulta de Equipos</title>
+    <style type="text/css">
+        .ui-paginator a {
+            margin-right: 5px;
+        }
+    </style>
+    <link rel="stylesheet" href="css/inicio.css"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
     <link href="css/estilos.css" rel="stylesheet" />
 </h:head>
 
 <h:body>
     <br/>
     <h:form id="registroElemento">
-        <a class="botonAtras" href="equipo.xhtml">
-            atrás
-        </a>
+        <p:button class="botonAtras" value="Atrás" outcome="equipo.xhtml"/>
         <center><h1>Consulta de Equipos</h1></center>
         <br/><br/>
         <div class="hola">
             <h2>Todos los Equipos</h2>
         </div>
         <center>
-            <p:dataTable id="tabla2" value="#{equipoBean.consultarEquipos()}" var="equipo" rows="100" style="width:1300px;">
-                <f:facet name="header">TODOS LOS EQUIPOS</f:facet>
-                <p:column headerText="Numero Serial">
-                    <center><p:outputLabel value="#{equipo.idEquipo}"/></center>
+            <p:dataTable id="tbl" var="equipo" value="#{equipoBean.consultarEquipos()}"
+                         paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {Exporters}"
+                         paginator="true" rows="10" style="margin-bottom:20px">
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Numero Serial" />
+                    </f:facet>
+                    <h:outputText value="#{equipo.idEquipo}" />
                 </p:column>
-                <p:column headerText="Nombre">
-                    <center><p:outputLabel value="#{equipo.nombre}"/></center>
+
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Nombre"/>
+                    </f:facet>
+                    <h:outputText value="#{equipo.nombre}" />
                 </p:column>
-                <p:column headerText="Disponible">
-                    <center><p:outputLabel value="#{equipo.disponible}"/></center>
+
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Disponible" />
+                    </f:facet>
+                    <h:outputText value="#{equipo.disponible}" />
                 </p:column>
-                <p:column headerText="Laboratorio">
-                    <center><p:outputLabel value="#{equipo.labAsociado}"/></center>
+
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Laboratorio" />
+                    </f:facet>
+                    <h:outputText value="#{equipo.labAsociado}" />
                 </p:column>
-                <p:column headerText="Activo">
-                    <center><p:outputLabel value="#{equipo.activo}"/></center>
+
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Activo" />
+                    </f:facet>
+                    <h:outputText value="#{equipo.activo}" />
                 </p:column>
             </p:dataTable>
+            <h:panelGrid columns="4" cellpadding="20">
+                <div class="cont_ofIma">
+                    <img src="assets/img/excel.png"/>
+                    <p:commandButton value="Exportar Excel" class="botonAccion" ajax="false">
+                        <p:dataExporter type="xls" target="tbl" fileName="Reporte_de_Equipos"/>
+                    </p:commandButton>
+                </div>
+            </h:panelGrid>
         </center>
     </h:form>
 </h:body>

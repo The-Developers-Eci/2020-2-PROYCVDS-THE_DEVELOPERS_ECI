@@ -8,6 +8,11 @@
 
 <h:head>
     <title>Consulta de elementos</title>
+    <style type="text/css">
+        .ui-paginator a {
+            margin-right: 5px;
+        }
+    </style>
     <link rel="stylesheet" href="css/inicio.css"/>
     <link rel="stylesheet" href="css/normalize.css"/>
     <link href="css/estilos.css" rel="stylesheet" />
@@ -16,7 +21,7 @@
 <h:body>
     <br/>
     <h:form id="registroElemento">
-        <p:button class="botonAtras" value="Atrás" outcome="inicio.xhtml">
+        <p:button class="botonAtras" value="Atrás" outcome="elemento.xhtml">
         </p:button>
         <center>
             <div class="title">
@@ -111,32 +116,64 @@
         </div>
         </div>
         <center>
-            <p:dataTable id="tabla2" value="#{Elemento.elementos}" var="elm" rows="100" style="width:1300px;">
-                <f:facet name="header">TODOS LOS ELEMENTOS</f:facet>
+            <p:dataTable id="tbl" var="elm" value="#{Elemento.elementos}"
+                         paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {Exporters}"
+                         paginator="true" style="margin-bottom:20px" sortBy="#{elm.tipo}" expandableRowGroups="true">
                 <p:headerRow>
                     <p:column colspan="6">
                         <h:outputText value="#{elm.tipo}" />
                     </p:column>
                 </p:headerRow>
-                <p:column headerText="Numero Serial">
-                    <center><p:outputLabel value="#{elm.numeroSerial}"/></center>
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Numero Serial" />
+                    </f:facet>
+                    <h:outputText value="#{elm.numeroSerial}" />
                 </p:column>
-                <p:column headerText="Tipo">
-                    <center><p:outputLabel value="#{elm.tipo}"/></center>
+
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Tipo"/>
+                    </f:facet>
+                    <h:outputText value="#{elm.tipo}" />
                 </p:column>
-                <p:column headerText="Marca">
-                    <center><p:outputLabel value="#{elm.marca}"/></center>
+
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Marca" />
+                    </f:facet>
+                    <h:outputText value="#{elm.marca}" />
                 </p:column>
-                <p:column headerText="Referencia">
-                    <center><p:outputLabel value="#{elm.referencia}"/></center>
+
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Referencia" />
+                    </f:facet>
+                    <h:outputText value="#{elm.referencia}" />
                 </p:column>
-                <p:column headerText="Disponible">
-                    <center><p:outputLabel value="#{elm.disponible}"/></center>
+
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Disponible" />
+                    </f:facet>
+                    <h:outputText value="#{elm.disponible}" />
                 </p:column>
-                <p:column headerText="Equipo Asociado">
-                    <center><p:outputLabel value="#{elm.equipoAsociado}"/></center>
+
+                <p:column>
+                    <f:facet name="header">
+                        <h:outputText value="Equipo Asociado" />
+                    </f:facet>
+                    <h:outputText value="#{elm.equipoAsociado}" />
                 </p:column>
             </p:dataTable>
+            <h:panelGrid columns="4" cellpadding="20">
+                <div class="cont_ofIma">
+                    <img src="assets/img/excel.png"/>
+                    <p:commandButton value="Exportar Excel" class="botonAccion" ajax="false">
+                        <p:dataExporter type="xls" target="tbl" fileName="Reporte_de_Elementos"/>
+                    </p:commandButton>
+                </div>
+            </h:panelGrid>
         </center>
     </h:form>
 </h:body>

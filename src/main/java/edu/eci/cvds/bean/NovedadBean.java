@@ -42,21 +42,20 @@ public class NovedadBean{
         this.novedades = novedades;
     }
 
-    public void agregarNovedadRegistroElemento() throws ExcepcionServiceHistorialEquipos {
-        serviceNovedad.agregarNovedadRegistroElemento("Registro","Hola",
-                "admin@eci.com",94);
-    }
-
     public void registrarNovedadEquipo(String tipo, String detalle, String autor, String idequipo) throws ExcepcionServiceHistorialEquipos{
         int idEqui = Integer.parseInt(idequipo);
         Novedad novedad= new Novedad(0,tipo,null,detalle,autor,0,idEqui);
         serviceNovedad.registrarNovedad(novedad);
+        FacesContext.getCurrentInstance().addMessage(null,
+                new FacesMessage(FacesMessage.SEVERITY_INFO, null, "Novedad del Equipo "+idEqui+" registrada satisfactoriamente."));
     }
 
     public void registrarNovedadElemento(String tipo, String detalle, String autor, String idElemento) throws ExcepcionServiceHistorialEquipos{
         int idElem = Integer.parseInt(idElemento);
         Novedad novedad= new Novedad(0,tipo,null,detalle,autor,idElem,0);
         serviceNovedad.registrarNovedad(novedad);
+        FacesContext.getCurrentInstance().addMessage(null,
+                new FacesMessage(FacesMessage.SEVERITY_INFO, null, "Novedad del Elemento "+idElem+" registrada satisfactoriamente."));
     }
 
     //DEFAULT

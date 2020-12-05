@@ -8,14 +8,14 @@
 
 <h:head>
     <title>Registro de Equipos</title>
+    <link rel="stylesheet" href="css/normalize.css"/>
     <link href="css/estilos.css" rel="stylesheet" />
 </h:head>
 
 <h:body>
     <br/>
+    <p:button class="botonAtras" value="Atrás" outcome="equipo.xhtml"/>
     <h:form id="registroEquipo">
-        <p:button class="botonAtras" value="Atrás" outcome="inicio.xhtml">
-        </p:button>
         <center>
             <h1>Registrar un Equipo</h1>
             <h:form id="formulario">
@@ -68,27 +68,6 @@
             <p:messages id="messages" showDetail="true" closable="true" style =" height: 50px ; width: 600px">
                 <p:autoUpdate />
             </p:messages>
-            <!--
-            <p:dataTable value="#{equipoBean.consultarEquipos()}" var="equipo" styleClass = "Table" rows="10" style="width:800px;" >
-                <p:column headerText="ID">
-                    <p:outputLabel value="#{equipo.idEquipo}"/>
-                </p:column>
-                <p:column headerText="Nombre">
-                    <p:outputLabel value="#{equipo.nombre}"/>
-                </p:column>
-
-                <p:column headerText="Disponible">
-                    <p:outputLabel value="#{equipo.disponible}"/>
-                </p:column>
-                <p:column headerText="Laboratorio">
-                    <p:outputLabel value="#{equipo.labAsociado}"/>
-                </p:column>
-                <p:column headerText="Activo">
-                    <p:outputLabel value="#{equipo.activo}"/>
-                </p:column>
-            </p:dataTable>
-            <label>#{equipo}</label>
-            -->
         </center>
     </h:form>
 </h:body>

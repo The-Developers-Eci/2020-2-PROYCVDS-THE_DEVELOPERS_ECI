@@ -14,7 +14,7 @@
 
 <h:body>
     <br/>
-    <p:button class="botonAtras" value="Atrás" outcome="inicio.xhtml">
+    <p:button class="botonAtras" value="Atrás" outcome="novedad.xhtml">
     </p:button>
         <center>
             <div class="title">
@@ -39,12 +39,12 @@
                         <f:selectItems value="#{equipoBean.getEquiposMap()}" />
                     </h:selectOneMenu>
 
-                    <p:outputLabel value="detalle" for="detalle">
+                    <p:outputLabel value="Detalle" for="detalle">
                     </p:outputLabel>
                     <p:inputText name="detalle" id="detalle" type="text" required="true" binding="#{detalle}">
                     </p:inputText>
 
-                    <p:outputLabel value="autor" for="autor">
+                    <p:outputLabel value="Autor" for="autor">
                     </p:outputLabel>
                     <p:inputText name="autor" id="autor" type="text" required="true" binding="#{autor}">
                     </p:inputText>
@@ -79,12 +79,12 @@
                         <f:selectItems value="#{Elemento.getElementosMap()}" />
                     </h:selectOneMenu>
 
-                    <p:outputLabel value="detalle" for="detalle2">
+                    <p:outputLabel value="Detalle" for="detalle2">
                     </p:outputLabel>
                     <p:inputText name="detalle" id="detalle2" type="text" required="true" binding="#{detalle2}">
                     </p:inputText>
 
-                    <p:outputLabel value="autor" for="autor2">
+                    <p:outputLabel value="Autor" for="autor2">
                     </p:outputLabel>
                     <p:inputText name="autor" id="autor2" type="text" required="true" binding="#{autor2}">
                     </p:inputText>
@@ -97,8 +97,6 @@
 
             </h:form>
             </div>
-
-
             <p:messages id="messages" showDetail="true" closable="true" style =" height: 50px ; width: 600px">
                 <p:autoUpdate />
             </p:messages>
