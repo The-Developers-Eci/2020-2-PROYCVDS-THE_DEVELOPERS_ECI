@@ -171,7 +171,7 @@ La planeación de los sprint se realizó en la primera reunión oficial de comie
 En total fueron 3 Sprint, y todo el grupo se puso de acuerdo para la asiganacion de tareas y cuáles de ellas se deberían hacer primero. Estableciendo tareas que se deberían realizar antes y que no saldrían si no se hicieran unas antes. Así fue como se estableció el orden y como se desarrolló el proyecto.	
 
 
-##**Taiga**
+## **Taiga**
 
 Mediante este enlace se podra acceder a la Herramienta Taiga y conocer el proceso del Proyecto. [Taiga THE-DEVELOPERS-Labinfo](https://tree.taiga.io/project/federico29-historial-de-equipos-labinfo/timeline/).
 
