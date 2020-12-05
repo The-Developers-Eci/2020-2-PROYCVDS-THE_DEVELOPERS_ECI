@@ -3,9 +3,9 @@
 ## ***THE-DEVELOPERS Labinfo***
 
 
-### Datos generales
--Periodo Acedemico: 2020-2
--curso: Ciclos de Vida y Desarrollo de Software
+##### Datos generales
+  -Periodo Acedemico: 2020-2
+  -curso: Ciclos de Vida y Desarrollo de Software
 -**Integrantes**:
   - Paula Guevara
   - Fabian Ramírez
