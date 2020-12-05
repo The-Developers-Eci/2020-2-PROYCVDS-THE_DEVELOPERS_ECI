@@ -55,7 +55,31 @@ Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS
   
   - En cada una le podremos poner el nombre de cada uno de estos artículos, y por último de le damos en la opción de REGISTRAR.
   
+  #### 6. **Consulta de novedades**
   
+  - Al presionar el botón de NOVEDADES podremos acceder a una tabla, con la información de los tipos de novedades y a que equipo se encuentran asociadas.
+  
+  #### 7. **Registro de novedades **
+  
+  - AL presionar el botón de REGISTRAR, se tendrá acceso a la pagina de ingreso de solicitudes nuevas para registrar una novedad.
+  - En ella encontraremos dos tipos de opciones:
+  
+  1. Registrar novedad de elementos.
+  2. Registrar novedad de equipos.
+  
+  - En donde se podrá registrar en detalle la novedad, con campos como: tipo, detalle, Elemento/Equipo Y el autor del mismo.
+  
+  #### 8. **Asociar elementos a equipo**
+  
+  - Al dar click en el botón de asociar elementos, nos dará la opción de registrar el elemento correspondiente, así como su equipo.
+  
+  #### 9. **Consulta de elementos**
+  
+  - Al darle clic en la opción de CONSULTA ELEMENTOS, tendremos las opción de ingresar el elemento, buscarlo y mostrar el historial completo de todos los elementos.
+  
+  ##### 10. **Consulta de equipos**
+  
+  - En consultar equipos podemos hacer uso del historial de todos los equipos que tiene el laboratorio y su estado de actividad. 
   
   
   
