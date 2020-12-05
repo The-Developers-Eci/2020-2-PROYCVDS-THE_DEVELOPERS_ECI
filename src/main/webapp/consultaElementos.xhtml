@@ -8,18 +8,25 @@
 
 <h:head>
     <title>Consulta de elementos</title>
+    <link rel="stylesheet" href="css/inicio.css"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
     <link href="css/estilos.css" rel="stylesheet" />
 </h:head>
 
 <h:body>
     <br/>
     <h:form id="registroElemento">
-        <a class="botonAtras" href="elemento.xhtml">
-            atrás
-        </a>
-        <center><h1>Consulta de Elementos</h1></center>
+        <p:button class="botonAtras" value="Atrás" outcome="inicio.xhtml">
+        </p:button>
+        <center>
+            <div class="title">
+                <h1>Consulta de Elementos</h1>
+            </div>
+        </center>
         <div class="hola">
+        <div class="title">
             <h2>Elementos de un Equipo</h2>
+        </div>
             <div class="row">
                 <p:inputText class="texto" binding="#{equipo}"></p:inputText>
                 <p:commandButton class="botonAccion" update="tabla" actionListener="#{Elemento.consultarElementosEquipo(equipo.value)}" value="Ingresar"></p:commandButton>
@@ -58,7 +65,9 @@
 
         <br/><br/>
         <div class="hola">
-            <h2>Buscar Elemento</h2>
+            <div class="title">
+                <h2>Buscar Elemento</h2>
+            </div>
             <div class="row">
                 <p:inputText class="texto" binding="#{numero}"></p:inputText>
                 <p:commandButton class="botonAccion" update="tabla1" actionListener="#{Elemento.consultarElemento(numero.value)}" value="Ingresar"></p:commandButton>
@@ -97,7 +106,9 @@
 
         <br/><br/>
         <div class="hola">
+        <div class="title">
             <h2>Todos los Elementos</h2>
+        </div>
         </div>
         <center>
             <p:dataTable id="tabla2" value="#{Elemento.elementos}" var="elm" rows="100" style="width:1300px;">

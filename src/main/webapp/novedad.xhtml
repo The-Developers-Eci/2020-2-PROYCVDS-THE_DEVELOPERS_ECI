@@ -7,17 +7,21 @@
       lang="es">
 
 <h:head>
-    <title>Consulta de novedades</title>
+    <link rel="stylesheet" href="css/inicio.css"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
     <link href="css/estilos.css" rel="stylesheet" />
 </h:head>
 
 <h:body>
     <br/>
     <h:form id="consultaNovedades">
-        <a class="botonAtras" href="inicio.xhtml">
-            atrás
-        </a>
-        <center><h1>Consulta de Novedades</h1></center>
+        <p:button class="botonAtras" value="Atrás" outcome="inicio.xhtml">
+        </p:button>
+        <center>
+            <div class="title">
+                <h1>Consulta de Novedades</h1>
+            </div>
+        </center>
         <br/><br/>
         <a class="botonAccion" href="registrarNovedad.xhtml"> registrar</a>
         <p:separator />

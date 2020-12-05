@@ -8,6 +8,8 @@
 
 <h:head>
     <title>Registro de Elementos</title>
+    <link rel="stylesheet" href="css/inicio.css"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
     <link href="css/estilos.css" rel="stylesheet" />
 </h:head>
 
@@ -15,13 +17,16 @@
     <p:tooltip />
     <br/>
     <h:form id="registroElemento">
-        <a class="botonAtras" href="elemento.xhtml">
-            atrás
-        </a>
+        <p:button class="botonAtras" value="Atrás" outcome="inicio.xhtml">
+        </p:button>
         <center>
-            <h1>Registro de Elementos</h1>
+
+            <div class="title">
+                <h1>Registro de Elementos</h1>
+            </div>
+            <div class="elements">
             <h:form id="tabla">
-                <div class="row">
+
                     <div class="column">
                         <h2>Tipo</h2>
                         <p:selectOneMenu id="Tipo" name="Tipo" binding="#{tipo}" style="width:187px">
@@ -31,6 +36,7 @@
                             <f:selectItem itemLabel="Teclado" itemValue="teclado"/>
                             <f:selectItem itemLabel="Pantalla" itemValue="pantalla"/>
                         </p:selectOneMenu>
+                        <br/>
                     </div>
                     <div class="column">
                         <h2>Marca</h2>
@@ -40,12 +46,15 @@
                         <h2>Referencia</h2>
                         <p:inputText name="Referencia" binding="#{ref}"></p:inputText>
                     </div>
-                </div>
+
             </h:form>
+
             <br/><br/><br/><br/><br/><br/><br/>
+            </div>
             <p:commandButton class="botonAccion" update="tabla" type="submit" value="Registrar"
                              actionListener="#{Elemento.agregarElemento(tipo.value,marca.value,ref.value)}"></p:commandButton>
             <p:separator />
+
             <!--
             <p:dataTable id="tabla" value="#{Elemento.elementos}" var="elm" rows="100" style="width:1300px;" scrollable="true" scrollHeight="400" sortBy="#{elm.tipo}"
                          expandableRowGroups="true">
@@ -77,7 +86,10 @@
             <p:messages id="messages" showDetail="true" closable="true" style =" height: 50px ; width: 600px">
                 <p:autoUpdate />
             </p:messages>
+
+
         </center>
+
     </h:form>
 </h:body>
 </html>

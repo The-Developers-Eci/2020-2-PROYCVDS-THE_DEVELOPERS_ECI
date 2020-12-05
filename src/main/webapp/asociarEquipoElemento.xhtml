@@ -8,19 +8,26 @@
 
 <h:head>
     <title>Asociar Elementos</title>
+    <link rel="stylesheet" href="css/inicio.css"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
     <link href="css/estilos.css" rel="stylesheet" />
 </h:head>
 
 <h:body>
     <br/>
     <h:form id="asocairElemento">
-        <a class="botonAtras" href="elemento.xhtml">
-            atrás
-        </a>
-        <center><h1>Asociar Elementos</h1></center>
+        <p:button class="botonAtras" value="Atrás" outcome="inicio.xhtml">
+        </p:button>
+        <center>
+            <div class="title">
+                <h1>Asociar Elementos</h1>
+            </div>
+        </center>
         <br/><br/>
         <div class="hola">
+        <div class="title">
             <h2>Asociar Elemento a Equipo</h2>
+        </div>
         </div>
         <div>
             <center>
@@ -31,6 +38,7 @@
                                      type="number" class="form-control">
                         <f:selectItems value="#{Elemento.getElementosMap()}" />
                     </h:selectOneMenu>
+
                     <p:outputLabel value="Equipo:" ></p:outputLabel>
                     <h:selectOneMenu name="equipo" id="equipoCon"
                                      value="#{equipoBean.selectedEquipo}" required="true" binding="#{equipo}"

@@ -7,18 +7,23 @@
       lang="es">
 <h:head>
     <title>Registro de Equipos</title>
+    <link rel="stylesheet" href="css/inicio.css"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
     <link href="css/estilos.css" rel="stylesheet" />
 </h:head>
 
 <h:body>
     <br/>
-        <a class="botonAtras" href="novedad.xhtml">
-            atrás
-        </a>
+    <p:button class="botonAtras" value="Atrás" outcome="inicio.xhtml">
+    </p:button>
         <center>
-            <h1>Registrar un Novedad</h1>
+            <div class="title">
+                <h1>Registrar un Novedad</h1>
+            </div>
             <h:form id="formulario">
-                <h2> Novedad Equipo</h2>
+                <div class="title">
+                    <h2> Novedad Equipo</h2>
+                </div>
                 <h:panelGrid columns="4" cellpadding="20">
                     <p:outputLabel value="Tipo" for="tipo"/>
                     <h:selectOneMenu name="Tipo" id="tipo" type="text" value="#{Novedad.tipoNovedad}" required="true" binding="#{tipo}">
@@ -56,7 +61,9 @@
 
             <div>
             <h:form id="formulario2">
-                <h2> Novedad Elemento</h2>
+                <div class="title">
+                    <h1> Novedad Elemento</h1>
+                </div>
                 <h:panelGrid columns="4" cellpadding="20">
                     <p:outputLabel value="Tipo" />
                     <h:selectOneMenu name="Tipo" type="text" value="#{Novedad.tipoNovedad}" required="true" binding="#{tipo2}">
