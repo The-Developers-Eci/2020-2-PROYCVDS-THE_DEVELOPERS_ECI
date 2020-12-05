@@ -1,13 +1,17 @@
 # PROYCVDS-THE_DEVELOPERS_ECI-2020-2
 
-## Historial de equipos Labinfo
+# THE-DEVELOPERS Labinfo
+
 ### *Periodo Acedemico*: 2020-2
 ### CICLOS DE VIDA Y DESARROLLO DE SOFTWARE
 ### Integrantes:
 - Paula Guevara
 - Fabian Ramirez
 - Federico Barrios
+
+###Profesor: Julian Velasco Briseño
 ### Asignación de roles:
+
   
 # Historial de Equipos
 ## Diagrama ER
