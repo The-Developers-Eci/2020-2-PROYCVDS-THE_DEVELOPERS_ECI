@@ -20,39 +20,6 @@
 Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS_ECI” la cual se encarga de mejorar el servicio que presta el personal de laboratorio de informática (Labinfo), de la escuela colombiana de ingeniería Julio Garavito. En la plataforma podemos encontrar varias funcionalidades que se usan en la día a día del laboratorio y que son necesarios para prestar un buen servicio a la comunidad de estudiantes. Entre ellas encontramos funciones como registrar elementos, equipos, así como registrar todos los laboratorios de informática requeridos en una semana cualquiera. Adicional a eso contamos con sistema que permite adjuntar las novedades que realizan cada uno de estos elementos y equipos, logrando así una mejor distribución de equipos del laboratorio de sistemas.
 
 ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/introduccion.png)
-
- # **Arquitectura y Diseño**
- 
- Se diseñó una arquitectura de 4 capas, separando la aplicación en componentes que se sitúan en diferentes niveles funcionales.
- 
- ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Arquitectura%20y%20Dise%C3%B1o.png)
-    
-  ## Capas
-  ### Capa de Persistencia
-  
-  En esta capa se encuentra todos aquellos componentes cuya funcionalidad está centrada en recuperar y/o almacenar los datos con los que trabaja nuestra           aplicación.
-  
-  ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Capa%20de%20Persistencia.png)
-  ### Capa de Negocio (Modelo)
-  Es la que soporta toda la lógica de negocio. En esta capa encontramos todas aquellas funciones que hacen algún tipo de tratamiento de los datos, se aplica las   reglas de negocio, etc.
-  
-  ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Digrama%20de%20clase%20Historial%20De%20Equipos.png)
-   
-  ### Capa de Interfaz de Usuario (Vista y Controlador)
-  Orientada a soportar la interactividad de los usuarios con las funcionalidades brindadas por la capa de negocio.
-  
-  ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Capa%20de%20Interfaz%20de%20Usuario%20(Vista%20y%20Controlador).png)
-  
-  ### Capa de Servicios
-  
-  Esta capa permite desacoplar la interfaz de usuario del resto de capas, permitiendo que las funcionalidades de nuestra aplicación sean accesible por otras       aplicaciones u servicios.
-  
-  ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Capa%20de%20Servicios.png)
-  
-### Modelo E-R
-![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Captura%20de%20pantalla%202020-11-13%20214917.png)
-#### Diagrama de clase
-![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Digrama%20de%20clase%20Historial%20De%20Equipos.png)
   
   # Manual de Usuario
   
@@ -166,7 +133,38 @@ Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS
   
   ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Consulta%20de%20equipos.png)
   
+ # **Arquitectura y Diseño**
  
+ Se diseñó una arquitectura de 4 capas, separando la aplicación en componentes que se sitúan en diferentes niveles funcionales.
+ 
+ ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Arquitectura%20y%20Dise%C3%B1o.png)
+    
+  ## Capas
+  ### Capa de Persistencia
+  
+  En esta capa se encuentra todos aquellos componentes cuya funcionalidad está centrada en recuperar y/o almacenar los datos con los que trabaja nuestra           aplicación.
+  
+  ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Capa%20de%20Persistencia.png)
+  ### Capa de Negocio (Modelo)
+  Es la que soporta toda la lógica de negocio. En esta capa encontramos todas aquellas funciones que hacen algún tipo de tratamiento de los datos, se aplica las   reglas de negocio, etc.
+  
+  ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Digrama%20de%20clase%20Historial%20De%20Equipos.png)
+   
+  ### Capa de Interfaz de Usuario (Vista y Controlador)
+  Orientada a soportar la interactividad de los usuarios con las funcionalidades brindadas por la capa de negocio.
+  
+  ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Capa%20de%20Interfaz%20de%20Usuario%20(Vista%20y%20Controlador).png)
+  
+  ### Capa de Servicios
+  
+  Esta capa permite desacoplar la interfaz de usuario del resto de capas, permitiendo que las funcionalidades de nuestra aplicación sean accesible por otras       aplicaciones u servicios.
+  
+  ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Capa%20de%20Servicios.png)
+  
+### Modelo E-R
+![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Captura%20de%20pantalla%202020-11-13%20214917.png)
+#### Diagrama de clase
+![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Digrama%20de%20clase%20Historial%20De%20Equipos.png)
 
 # **Tecnologías Utilizadas**
 
