@@ -20,13 +20,20 @@
 Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS_ECI” la cual se encarga de mejorar el servicio que presta el personal de laboratorio de informática (Labinfo), de la escuela colombiana de ingeniería Julio Garavito. En la plataforma podemos encontrar varias funcionalidades que se usan en la día a día del laboratorio y que son necesarios para prestar un buen servicio a la comunidad de estudiantes. Entre ellas encontramos funciones como registrar elementos, equipos, así como registrar todos los laboratorios de informática requeridos en una semana cualquiera. Adicional a eso contamos con sistema que permite adjuntar las novedades que realizan cada uno de estos elementos y equipos, logrando así una mejor distribución de equipos del laboratorio de sistemas.
     
   ### Manual de Usuario
+  
+  ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/portada%20manual%20usuario.png)
   #### 1. **Acceso al sitio web**
   - Ingrese al navegador de preferencia y escriba en la barra de direcciones el siguiente URL de acceso:
       https://thedeveloperseci.herokuapp.com/faces/index.xhtml
   
   #### 2.	**Inicio de Sesión**
   - Para el inicio de sesión, en la pagina principal debemos irnos a la esquina superior derecha, en donde encontraremos un botón LOGIN. 
+  
+  ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Inicio%20sesion.png)
+  
   - Al dar clic en el botón, nos redirigirá al menú de acceso, en donde nos solicitara en los espacios en blanco un Correo y una contraseña,     al ingresar dichos datos procedemos a darle INGRESAR.
+  
+  ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/inicio%20sesion%202.pngg)
   - Existen un tipo de usuario llamado: Amdinistrador
   - Este usuario cuenta con todos los privilegios para acceder a la página y así mismo realizar cambios.
   
@@ -36,12 +43,16 @@ Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS
   2. Reportar elementos
   3. Consulta de elementos.
   4. Asociar elementos-Equipo.
+  
+  ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Menu%20elementos.png)
 
   #### 4. **Menú de equipos**
   
   - Al presionar el botón de EQUIPOS podremos acceder a estas diferentes opciones:
   1. Registrar equipo
   2. Consultar equipo
+  
+  ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Menu%20equipos.png)
   
   #### 5. **Registro de equipos**
   
@@ -55,9 +66,14 @@ Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS
   
   - En cada una le podremos poner el nombre de cada uno de estos artículos, y por último de le damos en la opción de REGISTRAR.
   
+  ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Registro%20de%20equipos.png)
+  
   #### 6. **Consulta de novedades**
   
   - Al presionar el botón de NOVEDADES podremos acceder a una tabla, con la información de los tipos de novedades y a que equipo se encuentran asociadas.
+  
+  ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Consulta%20de%20novedades.png)
+  
   
   #### 7. **Registro de novedades**
   
@@ -69,17 +85,27 @@ Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS
   
   - En donde se podrá registrar en detalle la novedad, con campos como: tipo, detalle, Elemento/Equipo Y el autor del mismo.
   
+  
+  ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Registro%20novedades.png)
+  
+  
   #### 8. **Asociar elementos a equipo**
   
   - Al dar click en el botón de asociar elementos, nos dará la opción de registrar el elemento correspondiente, así como su equipo.
+  
+  ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Asociar%20elm%20equipo.png)
   
   #### 9. **Consulta de elementos**
   
   - Al darle clic en la opción de CONSULTA ELEMENTOS, tendremos las opción de ingresar el elemento, buscarlo y mostrar el historial completo de todos los elementos.
   
+  ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Consulta%20elementos.png)
+  
   #### 10. **Consulta de equipos**
   
   - En consultar equipos podemos hacer uso del historial de todos los equipos que tiene el laboratorio y su estado de actividad. 
+  
+  ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Consulta%20de%20equipos.png)
   
   
   ### Funcionalidades mas importantes
