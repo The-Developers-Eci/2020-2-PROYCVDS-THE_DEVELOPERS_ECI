@@ -118,7 +118,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS
 >[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://thedeveloperseci.herokuapp.com/)
 
 
-### **Descripción del proceso**:
+## **Descripción del proceso**:
 
 #### **Integrantes**:
 
@@ -126,8 +126,23 @@ Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS
 - Paula Guevara Sanchez.
 - Fabián Ramírez Pinto.
 
-# **Taiga**
+### **Descripcion de la metodologia**
+
+La planeación de los sprint se realizó en la primera reunión oficial de comienzo del proyecto, en donde se planteó los Sprint a trabajar y una generalidades del proyecto. Luego de eso, en la semana siguiente se comenzó a definir Sprint por Sprint de cada una de las tareas y se realizó una estimación de cuando tiempo tomaría la realización del proyecto y en cuanto tiempo se tendría si se cumpliera con todas las actividades del Sprint en las fechas establecidas.
+
+En total fueron 3 Sprint, y todo el grupo se puso de acuerdo para la asiganacion de tareas y cuáles de ellas se deberían hacer primero. Estableciendo tareas que se deberían realizar antes y que no saldrían si no se hicieran unas antes. Así fue como se estableció el orden y como se desarrolló el proyecto.	
+
+
+##**Taiga**
 
 Mediante este enlace se podra acceder a la Herramienta Taiga y conocer el proceso del Proyecto. [Taiga THE-DEVELOPERS-Labinfo](https://tree.taiga.io/project/federico29-historial-de-equipos-labinfo/timeline/).
+
+
+### ***SPRINTS y release-burndown chart***
+
+#### **SPRINT 1**
+
+
+
 
 
