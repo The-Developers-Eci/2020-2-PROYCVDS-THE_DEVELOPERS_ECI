@@ -1,8 +1,8 @@
-# THE_DEVELOPERS
+# ***THE_DEVELOPERS***
 
-# THE-DEVELOPERS Labinfo
+# ***THE-DEVELOPERS Labinfo***
 
-### *Periodo Acedemico*: 2020-2
+### Periodo Acedemico: 2020-2
 ### CICLOS DE VIDA Y DESARROLLO DE SOFTWARE
 ### Integrantes:
 - Paula Guevara
