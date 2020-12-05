@@ -37,6 +37,24 @@ Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS
   3. Consulta de elementos.
   4. Asociar elementos-Equipo.
 
+  #### 4. **Menú de equipos**
+  
+  - Al presionar el botón de EQUIPOS podremos acceder a estas diferentes opciones:
+  1. Registrar equipo
+  2. Consultar equipo
+  
+  #### 5. **Registro de equipos**
+  
+  - Esta opciones permiten realizar las siguientes funciones como:
+  
+  1. Ingresar equipo
+  2. Tipo Mouse
+  3. Tipo Teclado
+  4. Tipo Monitor
+  5. Tipo CPU.
+  
+  - En cada una le podremos poner el nombre de cada uno de estos artículos, y por último de le damos en la opción de REGISTRAR.
+  
   
   
   
