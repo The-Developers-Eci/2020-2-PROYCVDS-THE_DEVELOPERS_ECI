@@ -17,7 +17,12 @@
 
 ### Asignación de roles:
 ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/roles%20proy%20labinfo.png)
-  
+ 
+ ### Descripción del Producto
+ ##### Descripción General
+ ##### Manual de Usuario
+ ##### Funcionalidades mas importantes
+ 
 # Historial de Equipos
 ## Diagrama ER
 ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Captura%20de%20pantalla%202020-11-13%20214917.png)
