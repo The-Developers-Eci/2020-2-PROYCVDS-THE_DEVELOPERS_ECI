@@ -59,7 +59,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS
   
   - Al presionar el botón de NOVEDADES podremos acceder a una tabla, con la información de los tipos de novedades y a que equipo se encuentran asociadas.
   
-  #### 7. **Registro de novedades **
+  #### 7. **Registro de novedades**
   
   - AL presionar el botón de REGISTRAR, se tendrá acceso a la pagina de ingreso de solicitudes nuevas para registrar una novedad.
   - En ella encontraremos dos tipos de opciones:
@@ -77,7 +77,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS
   
   - Al darle clic en la opción de CONSULTA ELEMENTOS, tendremos las opción de ingresar el elemento, buscarlo y mostrar el historial completo de todos los elementos.
   
-  ##### 10. **Consulta de equipos**
+  #### 10. **Consulta de equipos**
   
   - En consultar equipos podemos hacer uso del historial de todos los equipos que tiene el laboratorio y su estado de actividad. 
   
