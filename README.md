@@ -111,8 +111,6 @@ Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS
 - **PostgresSQL**: Fue nuestro Principal y único servidor de base de datos usado para el proyecto, pues fue utilizado para todo el manejo de datos he información como tal, haciendo utilización de herencias , tipos de datos, funciones, restricciones y reglas de integridad útiles para el manejo de equipos y elementos del laboratorio de informática.
 
 
-## CircleCI
->[![CircleCI](https://circleci.com/gh/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI.svg?style=svg)](https://app.circleci.com/pipelines/github/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI)
 
 ## HerokuApp
 >[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://thedeveloperseci.herokuapp.com/)
@@ -205,3 +203,9 @@ Para este Sprint 3 se comenzaron a ver los rezagos de los sprint anteriores, pue
 #### ***Backlog***
 
 ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Sprint%203%20backlog.jpg)
+
+### Reporte de análisis de codigo CircleCI
+
+## CircleCI
+>[![CircleCI](https://circleci.com/gh/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI.svg?style=svg)](https://app.circleci.com/pipelines/github/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI)
+
