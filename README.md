@@ -22,7 +22,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS
   ##### Manual de Usuario
   - **Acceso al sitio web**
   - Ingrese al navegador de preferencia y escriba en la barra de direcciones el siguiente URL de acceso:
-  -- https://thedeveloperseci.herokuapp.com/faces/index.xhtml
+      https://thedeveloperseci.herokuapp.com/faces/index.xhtml
   
   
   
