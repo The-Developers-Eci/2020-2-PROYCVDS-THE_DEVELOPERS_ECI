@@ -99,6 +99,24 @@ Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS
 ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Captura%20de%20pantalla%202020-11-13%20214917.png)
 #### Diagrama de clase
 ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Digrama%20de%20clase%20Historial%20De%20Equipos.png)
+
+### **Tecnologías Utilizadas**
+
+- **Prime Faces(FRONT)**: Fue la librería utilizada para todos los componentes relacionados con el Front-End de la plataforma. Esta fue utilizada ya que es una librería ligera y que esta encapsulada en un único JAR, el que no requiere que se haga instalación de terceros para que esta sea puesta en marcha.
+
+- **Guice(BACK)**: Es el framework utilizado para la inyección de dependencias en Google Guice, permitiendo integrar aplicativos de Java ya hechos.
+
+- **QuickTheories**: Son propiedades basadas en testeo para Java 8, la cual soporta ambos procesos, como lo son la automaticidad y la búsqueda usando información cubierta.
+
+- **PostgresSQL**: Fue nuestro Principal y único servidor de base de datos usado para el proyecto, pues fue utilizado para todo el manejo de datos he información como tal, haciendo utilización de herencias , tipos de datos, funciones, restricciones y reglas de integridad útiles para el manejo de equipos y elementos del laboratorio de informática.
+
+
+
+
+
+
+
+
 ## CircleCI
 >[![CircleCI](https://circleci.com/gh/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI.svg?style=svg)](https://app.circleci.com/pipelines/github/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI)
 
