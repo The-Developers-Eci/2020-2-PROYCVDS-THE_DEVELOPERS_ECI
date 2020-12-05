@@ -172,8 +172,6 @@ Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS
 
 - **Guice(BACK)**: Es el framework utilizado para la inyección de dependencias en Google Guice, permitiendo integrar aplicativos de Java ya hechos.
 
-- **QuickTheories**: Son propiedades basadas en testeo para Java 8, la cual soporta ambos procesos, como lo son la automaticidad y la búsqueda usando información cubierta.
-
 - **PostgresSQL**: Fue nuestro Principal y único servidor de base de datos usado para el proyecto, pues fue utilizado para todo el manejo de datos he información como tal, haciendo utilización de herencias , tipos de datos, funciones, restricciones y reglas de integridad útiles para el manejo de equipos y elementos del laboratorio de informática.
 
 
