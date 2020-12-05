@@ -82,10 +82,18 @@ Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS
   - En consultar equipos podemos hacer uso del historial de todos los equipos que tiene el laboratorio y su estado de actividad. 
   
   
-  
-  
   ### Funcionalidades mas importantes
- 
+  
+  - El personal del laboratorio podra:
+  
+  #### **Agregar**
+  
+  - El personal del laboratorio podrá agregar nuevas novedades, equipos, elementos y laboratorios. Esta función consiste en completar los campos necesarios del elemento que nos pidan, con el fin de completar todos los campos y que el tipo de elemento o equipo pueda ser agregado de forma exitosa. Una restricción que existe es que se debe contar con 4 elementos que lo componen, para así completar el proceso de agregado de forma exitosa.
+  
+  #### **Asociar**
+  
+  - El personal del laboratorio contara con otra función muy importante que es la de asociar **elementos** y **equipos**, esta le permitirá asociar cada uno de estos al laboratorio especifico necesario y darles de baja en el momento de que sea necesario. Esto con el fin de que no se mezclen los elementos y equipos y después no se puedan identificar a que laboratorio pertenecen.
+  
 # Historial de Equipos
 ## Diagrama ER
 ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Captura%20de%20pantalla%202020-11-13%20214917.png)
