@@ -94,10 +94,10 @@ Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS
   
   - El personal del laboratorio contara con otra función muy importante que es la de asociar **elementos** y **equipos**, esta le permitirá asociar cada uno de estos al laboratorio especifico necesario y darles de baja en el momento de que sea necesario. Esto con el fin de que no se mezclen los elementos y equipos y después no se puedan identificar a que laboratorio pertenecen.
   
-# Historial de Equipos
-## Diagrama ER
+### **Arquitectura y Diseño Detallado**
+#### Modelo E-R
 ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Captura%20de%20pantalla%202020-11-13%20214917.png)
-## Diagrama de clase
+#### Diagrama de clase
 ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Digrama%20de%20clase%20Historial%20De%20Equipos.png)
 ## CircleCI
 >[![CircleCI](https://circleci.com/gh/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI.svg?style=svg)](https://app.circleci.com/pipelines/github/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI)
