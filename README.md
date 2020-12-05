@@ -140,7 +140,25 @@ Mediante este enlace se podra acceder a la Herramienta Taiga y conocer el proces
 
 ### ***SPRINTS y release-burndown chart***
 
-#### **SPRINT 1**
+### **SPRINT 1**
+
+Para este Sprint se usuaron las siguientes historias de usuario propuestas, con el fin de comenzar la estructuracion del proyecto:
+
+- Inicio de sesión
+- Registrar Elemento
+- Registrar Equipo.
+- Registrar Novedad.
+
+
+EL Sprint 1 comenzó a medias, debido que la definición de las tareas descritas anteriormente comenzó a generar problema, lo que causo que se generaran problemas en la implementación. Mas se sacaron adelante, entre los tres integrantes, cada uno atacando un problema diferente he intentado culminar todas las tareas en el tiempo menor posible.
+
+#### ***Burdown Chart***
+
+![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Captura%20de%20pantalla%202020-11-13%20214917.png)
+
+#### ***Backlog***
+
+
 
 
 
