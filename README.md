@@ -14,14 +14,14 @@
 ### Asignación de roles:
 ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/roles%20proy%20labinfo.png)
  
- ### Descripción del Producto
+ # Descripción del Producto
   #### Descripción General
   
 Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS_ECI” la cual se encarga de mejorar el servicio que presta el personal de laboratorio de informática (Labinfo), de la escuela colombiana de ingeniería Julio Garavito. En la plataforma podemos encontrar varias funcionalidades que se usan en la día a día del laboratorio y que son necesarios para prestar un buen servicio a la comunidad de estudiantes. Entre ellas encontramos funciones como registrar elementos, equipos, así como registrar todos los laboratorios de informática requeridos en una semana cualquiera. Adicional a eso contamos con sistema que permite adjuntar las novedades que realizan cada uno de estos elementos y equipos, logrando así una mejor distribución de equipos del laboratorio de sistemas.
 
 ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/introduccion.png)
 
- ### **Arquitectura y Diseño Detallado**
+ # **Arquitectura y Diseño**
  
  Se diseñó una arquitectura de 4 capas, separando la aplicación en componentes que se sitúan en diferentes niveles funcionales.
  
@@ -54,7 +54,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS
 #### Diagrama de clase
 ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Digrama%20de%20clase%20Historial%20De%20Equipos.png)
   
-  ### Manual de Usuario
+  # Manual de Usuario
   
   ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/portada%20manual%20usuario.png)
   #### 1. **Acceso al sitio web**
@@ -144,7 +144,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS
   ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Consulta%20de%20equipos.png)
   
   
-  ### Funcionalidades mas importantes
+  # Funcionalidades mas importantes
   
   - El personal del laboratorio podra:
   
@@ -168,7 +168,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS
   
  
 
-### **Tecnologías Utilizadas**
+# **Tecnologías Utilizadas**
 
 - **Prime Faces(FRONT)**: Fue la librería utilizada para todos los componentes relacionados con el Front-End de la plataforma. Esta fue utilizada ya que es una librería ligera y que esta encapsulada en un único JAR, el que no requiere que se haga instalación de terceros para que esta sea puesta en marcha.
 
@@ -180,11 +180,11 @@ Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS
 
 
 
-## HerokuApp
+# HerokuApp
 >[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://thedeveloperseci.herokuapp.com/)
 
 
-## **Descripción del proceso**:
+# **Descripción del proceso**:
 
 #### **Integrantes**:
 
