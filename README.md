@@ -30,6 +30,14 @@ Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS
   - Existen un tipo de usuario llamado: Amdinistrador
   - Este usuario cuenta con todos los privilegios para acceder a la página y así mismo realizar cambios.
   
+  #### 3. **Menú de elementos**
+  - Al presionar el botón de ELEMENTOS podremos acceder a estas diferentes opciones:
+  1. Registrar elementos
+  2. Reportar elementos
+  3. Consulta de elementos.
+  4. Asociar elementos-Equipo.
+
+  
   
   
   
