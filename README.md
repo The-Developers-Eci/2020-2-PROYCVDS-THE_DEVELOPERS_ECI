@@ -1,5 +1,8 @@
 # 2020-2-PROYCVDS-THE_DEVELOPERS_ECI
 
+## Historial de equipos Labinfo
+### Periodo Acedemico: 2020-2
+### CVDS 
 ### Integrantes:
 - Paula Guevara
 - Fabian Ramirez
