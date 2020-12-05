@@ -161,6 +161,24 @@ EL Sprint 1 comenzó a medias, debido que la definición de las tareas descritas
 ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/sprint%201%20backlog.jpg)
 
 
+### **SPRINT 2**
 
+Para este Sprint se usuaron las siguientes historias de usuario propuestas, con el fin de comenzar la estructuracion del proyecto:
+
+- Corrección del Sprint 1
+- Reporte historico de novedades
+- Reporte de equipos.
+- Reporte de laboratorios.
+- Reporte de elementos
+
+
+
+#### ***Burdown Chart***
+
+![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/sprint%202%20burdown%20chart.jpg)
+
+#### ***Backlog***
+
+![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/sprint%202%20backlog.jpg)
 
 
