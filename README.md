@@ -25,7 +25,10 @@ Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS
       https://thedeveloperseci.herokuapp.com/faces/index.xhtml
   
   #### 2.	**Inicio de Sesión**
-  -•	Para el inicio de sesión, en la pagina principal debemos irnos a la esquina superior derecha, en donde encontraremos un botón LOGIN. 
+  - Para el inicio de sesión, en la pagina principal debemos irnos a la esquina superior derecha, en donde encontraremos un botón LOGIN. 
+  - Al dar clic en el botón, nos redirigirá al menú de acceso, en donde nos solicitara en los espacios en blanco un Correo y una contraseña,     al ingresar dichos datos procedemos a darle INGRESAR.
+  - Existen un tipo de usuario llamado: Amdinistrador
+  - Este usuario cuenta con todos los privilegios para acceder a la página y así mismo realizar cambios.
   
   
   
