@@ -154,11 +154,11 @@ EL Sprint 1 comenzó a medias, debido que la definición de las tareas descritas
 
 #### ***Burdown Chart***
 
-![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Captura%20de%20pantalla%202020-11-13%20214917.png)
+![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/sprint%201%20Burdown%20chart.jpg)
 
 #### ***Backlog***
 
-
+![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/sprint%201%20backlog.jpg)
 
 
 
