@@ -18,6 +18,8 @@
   #### Descripción General
   
 Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS_ECI” la cual se encarga de mejorar el servicio que presta el personal de laboratorio de informática (Labinfo), de la escuela colombiana de ingeniería Julio Garavito. En la plataforma podemos encontrar varias funcionalidades que se usan en la día a día del laboratorio y que son necesarios para prestar un buen servicio a la comunidad de estudiantes. Entre ellas encontramos funciones como registrar elementos, equipos, así como registrar todos los laboratorios de informática requeridos en una semana cualquiera. Adicional a eso contamos con sistema que permite adjuntar las novedades que realizan cada uno de estos elementos y equipos, logrando así una mejor distribución de equipos del laboratorio de sistemas.
+
+![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/introduccion.png)
     
   ### Manual de Usuario
   
