@@ -27,7 +27,7 @@ Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS
  
  ![texto cualquiera por si no carga la imagen](https://github.com/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI/blob/main/Imagenes/Arquitectura%20y%20Dise%C3%B1o.png)
     
-  ### Capas
+  ## Capas
   #### Capa de Persistencia
   
   En esta capa se encuentra todos aquellos componentes cuya funcionalidad está centrada en recuperar y/o almacenar los datos con los que trabaja nuestra           aplicación.
