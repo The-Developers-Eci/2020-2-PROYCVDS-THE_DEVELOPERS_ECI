@@ -111,14 +111,23 @@ Es un herramienta desarrollada por el grupo de desarrolladores “THE_DEVELOPERS
 - **PostgresSQL**: Fue nuestro Principal y único servidor de base de datos usado para el proyecto, pues fue utilizado para todo el manejo de datos he información como tal, haciendo utilización de herencias , tipos de datos, funciones, restricciones y reglas de integridad útiles para el manejo de equipos y elementos del laboratorio de informática.
 
 
-
-
-
-
-
-
 ## CircleCI
 >[![CircleCI](https://circleci.com/gh/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI.svg?style=svg)](https://app.circleci.com/pipelines/github/The-Developers-Eci/2020-2-PROYCVDS-THE_DEVELOPERS_ECI)
 
 ## HerokuApp
 >[![Deployed to Heroku](https://www.herokucdn.com/deploy/button.png)](https://thedeveloperseci.herokuapp.com/)
+
+
+### **Descripción del proceso**:
+
+#### **Integrantes**:
+
+- Federico Barrios Menenes,
+- Paula Guevara Sanchez.
+- Fabián Ramírez Pinto.
+
+### **Taiga**
+
+Mediante este enlace se podra acceder a la Herramienta Taiga y conocer el proceso del Proyecto [Taiga THE-DEVELOPERS-Labinfo](https://tree.taiga.io/project/federico29-historial-de-equipos-labinfo/timeline/).
+
+
